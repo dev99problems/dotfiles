@@ -1,0 +1,66 @@
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    side-by-side = true
+    line-numbers = true
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Dracula
+    #syntax-theme = Monokai Extended
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[alias]
+  # tips from Harry Roberts
+  # https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
+  stats = !git shortlog -sn --all --no-merges
+  recent = !git for-each-ref --count=5 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+
+  # tips from Rob Miller
+  # https://gist.github.com/robmiller/6018582
+  br-name = "!git rev-parse --abbrev-ref HEAD"
+  diffmaster = "!git log --oneline origin/master..$(git br-name)"
+  diffmain = "!git log --oneline origin/main..$(git br-name)"
+  # pupu stands for push-push this lil branch 🙃
+  pupu = "!git push origin $(git br-name)"
+
+  # my personal 
+  st = status 
+  com = commit
+  pu = push origin 
+  br = branch
+  # not used a lot
+  irebase = rebase origin/master -i
+  unstash = !git stash pop
+  cho = checkout
+  hi = !git hist | head 
+  hist = log --graph --color --pretty=format:'%Cred%ad%Creset %C(yellow)%h%Creset | %s%d %C(bold blue)[%an]' --date=short
+  filez = diff-tree --no-commit-id --name-only -r @
+  last = !git hist | head -n 1 
+  relast = reset @^
+  droplast = !git reset --hard HEAD~1
+  fe = fetch
+  # not used a lot
+  rel = reset .
+  prev = !git cho -
+  fix = commit --amend --no-edit
+  sign = !git com -m
+  new = !git cho -b
+  update = !git fe  && echo "------- updating from: master -------" && git rebase origin/master 
+  upd = !git update
+  updm = !git fetch && echo "-------- updating from: main --------" && git rebase origin/main 
+  rename = !git branch -M
+  del = !git branch -D
+  draft = commit -m draft-commit --no-verify
+  
+[user]
+	name = Eugene Chulkov
+	email = <your_email>
+[init]
+	defaultBranch = master
