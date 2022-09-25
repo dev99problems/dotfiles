@@ -30,14 +30,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ThePrimeagen/vim-be-good'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 " https://github.com/windwp/nvim-autopairs
 Plug 'windwp/nvim-autopairs'
 Plug 'airblade/vim-gitgutter'
-" Plug 'flw-cn/vim-nerdtree-l-open-h-close'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
 
@@ -72,6 +70,12 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'kyazdani42/nvim-tree.lua'
 " Plug 'preservim/nerdtree'
 
+" Treesitter-Context
+" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-context'
+
+
 call plug#end()
 
 " -----------------------------------------------
@@ -98,6 +102,12 @@ nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
+
+" greatest remap ever ;-)
+" let's do selection and paste instead of it and also
+" keeps the paste cotent in the register
+xnoremap <leader>pp "_dP 
+
 " unbind s in Visual mode to be able
 " to use vim-arround in Visula mode
 vmap s <Nop>
@@ -150,13 +160,9 @@ nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 " -----------------------------------------------
 " #commands
 " -----------------------------------------------
-"  NOTE: @gene, this doesn't work correct
-command Nvupd execute "source $MYVIMRC"
 
-
-" ##nerdtree keys
-" nnoremap <C-n> :NERDTreeToggle<CR>
-
+" To update currently open vim, with updated config 
+command nvupd execute "source $MYVIMRC"
 
 " -----------------------------------------------
 " #configs
@@ -301,7 +307,6 @@ update_cwd = false,
 reload_on_bufenter = false,
 view = {
   width = 35,
-  height = 30,
   hide_root_folder = false,
   side = "left",
   preserve_window_proportions = true,
@@ -491,22 +496,18 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-
-" Adds synchronisatin between NerdTree and opened file,
-" basically, openes the current file's folder
-autocmd BufEnter * lcd %:p:h
-
 " NOT SURE this works
 " This should make autosave buffer on switch
 " and autoread them on focus
 au FocusLost,WinLeave * :silent! w
 
 
+" NOTE: maybe this can be useful to rework for nvim-tree!?
 " NerdTree
 " Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+" autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+    " \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
