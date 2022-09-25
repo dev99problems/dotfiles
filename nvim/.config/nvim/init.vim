@@ -162,7 +162,7 @@ nnoremap <silent><leader>9 <Cmd>BufferLineGoToBuffer 9<CR>
 " -----------------------------------------------
 
 " To update currently open vim, with updated config 
-command nvupd execute "source $MYVIMRC"
+command Nvupd execute "source $MYVIMRC"
 
 " -----------------------------------------------
 " #configs
