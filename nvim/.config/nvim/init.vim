@@ -75,6 +75,8 @@ Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 
+" Scroll
+Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
 
@@ -108,10 +110,12 @@ nnoremap <C-L> <C-W>l
 " keeps the paste cotent in the register
 xnoremap <leader>pp "_dP 
 
-" unbind s in Visual mode to be able
-" to use vim-arround in Visula mode
-vmap s <Nop>
+" show registers
+nnoremap <leader><leader>r :exe "reg"<CR>
 
+" unbind s in Visual mode to be able
+" to use vim-arround in Visual mode
+vmap s <Nop>
 
 " add empty line in normal mode
 map <Enter> o<ESC>
@@ -127,11 +131,10 @@ nnoremap <silent><leader><leader>t :exe "term"<CR>
 
 " Closing buffers
 nnoremap <silent><leader>bd :exe "bd"<CR>
-" nnoremap <silent><leader>wd :exe "bw"<CR>
 
 " changing size on +/-
-nnoremap + :exe "vertical resize +7"<CR>
-nnoremap _ :exe "vertical resize -7"<CR>
+nnoremap + :exe "vertical resize +5"<CR>
+nnoremap _ :exe "vertical resize -5"<CR>
 
 
 " ##telescope keys
@@ -173,36 +176,31 @@ let g:gitgutter_map_keys = 0
 let g:gitgutter_enabled = 1
 
 " lsp-config
-lua << EOF
-require'lspconfig'.solargraph.setup{}
-EOF
+lua require('lspconfig').solargraph.setup{}
+
+" neoscroll
+lua require('neoscroll').setup()
 
 " colorizer-config
 lua require'colorizer'.setup()
 
-
 " autopairs-config
 lua require('nvim-autopairs').setup()
-
 
 " lua require('vim-gitgutter').setup()
 
 " lualine-config
-lua << END
-require('lualine').setup() 
-END
+lua require('lualine').setup() 
 
 " lua-icons-config
 lua require('nvim-web-devicons').setup()
 
 " lua bufferline-config
-lua << END
-require('bufferline').setup {
+lua require('bufferline').setup {
   options = {
     numbers = 'ordinal'
   }
 }
-END
 
 " auto-completion
 set completeopt=menu,menuone,noselect
