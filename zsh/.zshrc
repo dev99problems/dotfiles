@@ -82,6 +82,8 @@ alias grei="git rebase -i origin/master"
 alias gm="git cho master" 
 alias gmm="git cho main" 
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
+# attempt-to-add: let to see git diff for untracked files
+alias gdu='git add -N . && git diff'
 
 # gh 
 alias ghh="gh pr create --fill" 
