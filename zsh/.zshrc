@@ -83,6 +83,9 @@ alias gm="git cho master"
 alias gmm="git cho main" 
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 
+# gh 
+alias ghh="gh pr create --fill" 
+
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
 
