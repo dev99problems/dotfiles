@@ -5,12 +5,13 @@
     show = delta
 
 [delta]
-    side-by-side = true
+    side-by-side = false
     line-numbers = true
-    plus-style = "syntax #012800"
-    minus-style = "syntax #340001"
+    plus-style = "syntax #1C612B"
+    minus-style = "syntax #4B525A"
+    ; minus-style = "syntax #4D4242"
+    insert-style = "syntax #274533"
     syntax-theme = Dracula
-    #syntax-theme = Monokai Extended
     navigate = true
 
 [interactive]
