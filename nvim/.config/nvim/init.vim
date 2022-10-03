@@ -1,86 +1,6 @@
-" -----------------------------------------------
-" #plugins
-" -----------------------------------------------
-call plug#begin('~/.vim/plugged')
-
-Plug 'nvim-lua/plenary.nvim'
-" Telescope
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
-
-Plug 'ThePrimeagen/vim-be-good'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-" https://github.com/windwp/nvim-autopairs
-Plug 'windwp/nvim-autopairs'
-Plug 'airblade/vim-gitgutter'
-" Plug 'flw-cn/vim-nerdtree-l-open-h-close'
-Plug 'norcalli/nvim-colorizer.lua'
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install --production' }
-
-" lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" Power lines
-Plug 'nvim-lualine/lualine.nvim'
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
-
-" Icons
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-
-" Themes
-Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'drewtempelmeyer/palenight.vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-
-" File Trees
-Plug 'kyazdani42/nvim-tree.lua'
-" Plug 'preservim/nerdtree'
-
-" Treesitter-Context
-" Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-context'
-
-" Dashboard
-" Plug 'glepnir/dashboard-nvim'
-
-" Scroll
-Plug 'karb94/neoscroll.nvim'
-
-" Trouble Vim
-Plug 'folke/trouble.nvim'
-
-
-call plug#end()
-
-" -----------------------------------------------
-" #plugins                                    END
-" -----------------------------------------------
-
-
-" -----------------------------------------------
-" #commands
-" -----------------------------------------------
 " To update currently open vim, with updated config 
 command Nvupd execute "source $MYVIMRC"
 
-
-" -----------------------------------------------
-" #configs
-" -----------------------------------------------
 " User.*
 lua << EOF
 require('user.options')
@@ -94,7 +14,11 @@ lua << EOF
 require('user.colorscheme')
 EOF
 
-" Telescope
+lua << EOF
+require('user.plugins')
+EOF
+
+" telescope
 lua << END
 require('user.telescope')
 END
@@ -219,14 +143,6 @@ EOF
 
 " -----------------------------------------------
 " #configs |>                                 END
-" -----------------------------------------------
-
-
-
-
-" -----------------------------------------------
-" !!!!!!!!!!! NOT SURE ABOUT THIS !!!!!!!!!!!!!!!!!!!
-" NVIM_TREE is not used atm and replaced with NerdTree
 " -----------------------------------------------
 
 
@@ -356,59 +272,6 @@ END
 
 
 " nnoremap <C-n> :NvimTreeToggle<CR>
-"let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
-"let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
-"let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
-"let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
-"let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
-"let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
-"let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
-"let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
-"let g:nvim_tree_create_in_closed_folder = 1 "0 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
-"let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
-"let g:nvim_tree_show_icons = {
-"    \ 'git': 1,
-"    \ 'folders': 1,
-"    \ 'files': 1,
-"    \ 'folder_arrows': 1,
-"    \ }
-""If 0, do not show the icons for one of 'git' 'folder' and 'files'
-""1 by default, notice that if 'files' is 1, it will only display
-""if nvim-web-devicons is installed and on your runtimepath.
-""if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
-""but this will not work when you set renderer.indent_markers.enable (because of UI conflict)
-
-"let g:nvim_tree_view_side = 'left'
-"let g:nvim_tree_trash_cmd = 'trash'
-"let g:nvim_tree_trash_require_confirm = 1 
-
-"" default will show icon by default if no icon is provided
-"" default shows no icon by default
-"let g:nvim_tree_icons = {
-"    \ 'default': "",
-"    \ 'symlink': "",
-"    \ 'git': {
-"    \   'unstaged': "✗",
-"    \   'staged': "✓",
-"    \   'unmerged': "",
-"    \   'renamed': "➜",
-"    \   'untracked': "★",
-"    \   'deleted': "",
-"    \   'ignored': "◌"
-"    \   },
-"    \ 'folder': {
-"    \   'arrow_open': "",
-"    \   'arrow_closed': "",
-"    \   'default': "",
-"    \   'open': "",
-"    \   'empty': "",
-"    \   'empty_open': "",
-"    \   'symlink': "",
-"    \   'symlink_open': "",
-"    \   }
-"    \ }
-
-" nnoremap <C-n> :NvimTreeToggle<CR>
 " nnoremap <leader>r :NvimTreeRefresh<CR>
  nnoremap <leader>n :NvimTreeFindFile<CR>
 " More available functions:
@@ -423,6 +286,7 @@ END
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 " NVIM_TREE_END
+
 
 
 " -----------------------------------------------
@@ -441,7 +305,7 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-" NOTE: Not sure this works
+" NOTE: not sure this works
 " This should make autosave buffer on switch
 " and autoread them on focus
 au FocusLost,WinLeave * :silent! w
