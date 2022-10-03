@@ -15,12 +15,12 @@ require('user.colorscheme')
 EOF
 
 lua << EOF
-require('user.plugins')
+require('user.plugins_list')
 EOF
 
-" telescope
+" Plugins custom configs
 lua << END
-require('user.telescope')
+require('user.plugins.index')
 END
 
 " vim-gitgugger-config
@@ -37,35 +37,6 @@ lua require('lspconfig').solargraph.setup{}
 " eslint
 lua require('lspconfig').eslint.setup{}
 
-
-" neoscroll
-lua require('neoscroll').setup()
-
-" colorizer-config
-lua require'colorizer'.setup()
-
-" autopairs-config
-lua require('nvim-autopairs').setup()
-
-
-" lua require('vim-gitgutter').setup()
-
-" lualine-config
-lua << END
-require('lualine').setup() 
-END
-
-" lua-icons-config
-lua require('nvim-web-devicons').setup()
-
-" lua bufferline-config
-lua << END
-require('bufferline').setup {
-  options = {
-    numbers = 'ordinal'
-  }
-}
-END
 
 " auto-completion
 set completeopt=menu,menuone,noselect
