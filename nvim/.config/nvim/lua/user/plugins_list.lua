@@ -65,6 +65,14 @@ return packer.startup(function(use)
     requires = 'hrsh7th/nvim-cmp'
   }
 
+  -- snippets
+  use {
+    'L3MON4D3/LuaSnip', 
+    tag = 'v<CurrentMajor>.*'
+  }
+  use 'rafamadriz/friendly-snippets'
+
+
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
