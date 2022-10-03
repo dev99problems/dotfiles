@@ -90,6 +90,10 @@ lua << EOF
 require('user.keymaps')
 EOF
 
+lua << EOF
+require('user.colorscheme')
+EOF
+
 " Telescope
 lua << END
 require('user.telescope')
@@ -426,6 +430,10 @@ highlight NvimTreeFolderIcon guibg=blue
 " -----------------------------------------------
 " makes terminal opened in insert mode
 autocmd TermOpen * startinsert
+
+" Adds synchronisation between NvimTree and opened file,
+" basically, openes the current file's folder
+autocmd BufEnter * lcd %:p:h
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *

@@ -1,5 +1,6 @@
 local options = {
   syntax = "on",
+  mouse = "a",
   tabstop = 2,
   softtabstop = 2,
   shiftwidth = 2,
@@ -35,6 +36,4 @@ vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
-vim.cmd("colorscheme dracula")
 
