@@ -87,6 +87,7 @@ alias gdu='git add -N . && git diff'
 
 # gh 
 alias ghh="gh pr create --fill" 
+alias ghhd="gh pr create --fill -d" 
 
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
