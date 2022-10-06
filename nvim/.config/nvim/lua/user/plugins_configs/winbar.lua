@@ -1,9 +1,5 @@
-local status_ok, winbar = pcall(require, 'winbar')
-
-if not status_ok then
-  print 'winbar was not loaded properly!'
-  return
-end
+local utils = require('user.utils')
+local winbar = utils.safe_require('winbar')
 
 winbar.setup({
   enabled = true,
