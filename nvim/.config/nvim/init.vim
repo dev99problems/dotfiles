@@ -6,12 +6,12 @@ lua require('user.options')
 
 lua require('user.keymaps')
 
-lua require('user.colorscheme')
+lua require('user.theme')
 
 lua require('user.plugins_list')
 
 " Plugins custom configs
-lua require('user.plugins.index')
+lua require('user.plugins')
 
 lua require('user.cmp')
 
@@ -22,13 +22,13 @@ let g:gitgutter_enabled = 1
 
 " LSP
 " lsp-ruby
-lua require('lspconfig').solargraph.setup{}
+" lua require('lspconfig').solargraph.setup{}
 
 " lsp-ts
 " lua require('lspconfig').denols.setup{}
 
 " eslint
-lua require('lspconfig').eslint.setup{}
+" lua require('lspconfig').eslint.setup{}
 
 
 " auto-completion

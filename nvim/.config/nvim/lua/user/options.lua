@@ -1,6 +1,6 @@
 local options = {
-  syntax = "on",
-  mouse = "a",
+  syntax = 'on',
+  mouse = 'a',
   tabstop = 2,
   softtabstop = 2,
   shiftwidth = 2,
@@ -10,7 +10,7 @@ local options = {
   relativenumber = true, 
   nu = true,             
   scrolloff = 6,
-  signcolumn = "yes",
+  signcolumn = 'yes',
   updatetime = 100,
    -- this makes buffer autoread on focus
   autoread = true,
@@ -21,7 +21,7 @@ local options = {
 
   splitbelow = true,
   splitright = true,
-  fileencoding = "utf-8",
+  fileencoding = 'utf-8',
   undofile = true, 
   updatetime = 300,
   cursorline = true,
@@ -31,7 +31,7 @@ local options = {
   -- incsearch = true,
 }
 
-vim.opt.shortmess:append "c"
+vim.opt.shortmess:append 'c'
 
 for k, v in pairs(options) do
   vim.opt[k] = v

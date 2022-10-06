@@ -1,7 +1,7 @@
-local telescope = require("telescope")
-local actions = require("telescope.actions")
+local telescope = require('telescope')
+local actions = require('telescope.actions')
 
-print('Ola from user.telescope config ')
+-- print('Ola from user.telescope config ')
 
 telescope.setup({
   defaults = {
