@@ -1,10 +1,7 @@
+local utils = require('user.utils')
+
 local theme = 'dracula'
 local theme_param = 'colorscheme ' .. theme
+local err_msg = theme_param .. ' can not be found'
 
-local status_ok, _ = pcall(vim.cmd, theme_param)
-
-if not status_ok then
-  vim.notify(theme_param .. ' not found')
-  return
-end
-
+utils.safe_call(vim.cmd, theme_param, err_msg)

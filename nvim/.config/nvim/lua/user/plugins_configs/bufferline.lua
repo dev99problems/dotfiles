@@ -1,9 +1,5 @@
-local status_ok, bufferline = pcall(require, 'bufferline')
-
-if not status_ok then
-  print 'bufferline was not loaded properly!'
-  return
-end
+local utils = require('user.utils')
+local bufferline = utils.safe_require('bufferline')
 
 bufferline.setup {
   options = {

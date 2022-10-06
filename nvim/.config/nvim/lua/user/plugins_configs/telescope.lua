@@ -1,5 +1,7 @@
-local telescope = require('telescope')
-local actions = require('telescope.actions')
+local utils = require('user.utils')
+local telescope = utils.safe_require('telescope')
+-- local telescope = require('telescope')
+-- local actions = require('telescope.actions')
 
 -- print('Ola from user.telescope config ')
 
