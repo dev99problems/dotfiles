@@ -1,17 +1,17 @@
 local fn = vim.fn
 
 -- Automatically install packer
-local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local install_path = fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
+    'git',
+    'clone',
+    '--depth',
+    '1',
+    'https://github.com/wbthomason/packer.nvim',
     install_path,
   }
-  print "Installing packer close and reopen Neovim..."
+  print 'Installing packer close and reopen Neovim...'
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -24,9 +24,9 @@ vim.cmd [[
 ]]
 
 -- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
+local status_ok, packer = pcall(require, 'packer')
 if not status_ok then
-  print "Packer can not be loaded!"
+  print 'Packer can not be loaded!'
   return
 end
 
@@ -117,6 +117,7 @@ return packer.startup(function(use)
   -- Plug 'ThePrimeagen/vim-be-good'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
+  use 'tpope/vim-repeat'
 
   -- Scroll
   use 'karb94/neoscroll.nvim'
@@ -141,7 +142,7 @@ return packer.startup(function(use)
 
 
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+    require('packer').sync()
   end
 end)
 
