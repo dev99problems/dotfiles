@@ -52,7 +52,7 @@ return packer.startup(function(use)
   }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
 
-  -- lsp
+  -- cmp
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
@@ -64,6 +64,10 @@ return packer.startup(function(use)
     run='./install.sh', 
     requires = 'hrsh7th/nvim-cmp'
   }
+
+  -- lsp
+  use 'neovim/nvim-lspconfig'
+  use 'williamboman/nvim-lsp-installer'
 
   -- snippets
   use {

@@ -15,6 +15,8 @@ lua require('user.plugins_configs')
 
 lua require('user.cmp')
 
+lua require('user.lsp')
+
 
 " vim-gitgugger-config
 let g:gitgutter_map_keys = 0
