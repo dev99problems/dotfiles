@@ -8,10 +8,10 @@ lua require('user.keymaps')
 
 lua require('user.theme')
 
-lua require('user.plugins_list')
+lua require('user.plugins')
 
 " Plugins custom configs
-lua require('user.plugins')
+lua require('user.plugins_configs')
 
 lua require('user.cmp')
 
