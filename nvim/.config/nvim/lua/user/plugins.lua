@@ -46,7 +46,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use {
-    'nvim-telescope/telescope.nvim', 
+    'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -60,8 +60,8 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
   use {
-    'tzachar/cmp-tabnine', 
-    run='./install.sh', 
+    'tzachar/cmp-tabnine',
+    run='./install.sh',
     requires = 'hrsh7th/nvim-cmp'
   }
 
@@ -71,7 +71,7 @@ return packer.startup(function(use)
 
   -- snippets
   use {
-    'L3MON4D3/LuaSnip', 
+    'L3MON4D3/LuaSnip',
     tag = 'v<CurrentMajor>.*'
   }
   use 'rafamadriz/friendly-snippets'
@@ -101,14 +101,14 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
-    'akinsho/bufferline.nvim', 
-    tag = 'v2.*', 
+    'akinsho/bufferline.nvim',
+    tag = 'v2.*',
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
   -- Icons
   use 'ryanoasis/vim-devicons'
-  use 'kyazdani42/nvim-web-devicons' 
+  use 'kyazdani42/nvim-web-devicons'
 
   -- File Trees
   use {
@@ -135,13 +135,13 @@ return packer.startup(function(use)
   -- Themes
   use 'gruvbox-community/gruvbox'
   use {
-    'dracula/vim', 
-    as = 'dracula' 
+    'dracula/vim',
+    as = 'dracula'
   }
   use 'drewtempelmeyer/palenight.vim'
-  use { 
-    'sonph/onehalf', 
-    rtp = 'vim' 
+  use {
+    'sonph/onehalf',
+    rtp = 'vim'
   }
 
 
