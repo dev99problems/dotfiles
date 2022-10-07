@@ -143,6 +143,7 @@ return packer.startup(function(use)
     'sonph/onehalf',
     rtp = 'vim'
   }
+  use 'shaunsingh/solarized.nvim'
 
 
   if PACKER_BOOTSTRAP then
