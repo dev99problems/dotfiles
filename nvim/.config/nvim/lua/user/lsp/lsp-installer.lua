@@ -39,4 +39,9 @@ lspconfig.jsonls.setup {
   settings = jsonls_settings
 }
 
+lspconfig.solargraph.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
+
 
