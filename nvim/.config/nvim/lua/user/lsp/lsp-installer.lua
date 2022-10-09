@@ -44,4 +44,21 @@ lspconfig.solargraph.setup {
   capabilities = opts.capabilities,
 }
 
+lspconfig.marksman.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
+
+lspconfig.tsserver.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
+
+lspconfig.eslint.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
+
+
+
 
