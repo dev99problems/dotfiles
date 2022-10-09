@@ -37,7 +37,9 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<leader>t", ":terminal <CR>", opts)
 
  -- close buffers
-keymap("n", "<leader>bd", ":bd <CR>", opts)
+-- keymap("n", "<leader>bd", ":bd <CR>", opts)
+-- !!! trying smth. a bit simpler
+keymap("n", "<leader>d", ":bd <CR>", opts)
 
  -- close windows
 keymap("n", "<leader>wd", ":bd <CR>", opts)
@@ -79,10 +81,14 @@ keymap("x", "<leader><leader>p", "\"_dP", opts)
 -- # Tools --
 -- Terminal --
 -- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- !!! instead of recommended these
+-- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+-- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+-- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+-- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+-- !!! I have this, which let's me switch to prev/next buf
+keymap("t", "<S-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap("t", "<S-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- # Plugins --
 -- ## Telescope --
@@ -91,6 +97,13 @@ keymap("n", "<leader>ff", ":Telescope find_files <CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers <CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
+keymap("n", "<M-e>", ":Telescope oldfiles <CR>", opts)
+keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find <CR>", opts)
+keymap("n", "<leader>fb", ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+keymap("n", "gst", ":Telescope git_status <CR>", opts)
+
+-- ## Float Term
+keymap("n", "<leader>tn", ":FloatermNew --height=0.85 --width=0.85 --wintype=float --name=default <CR>", opts)
 
 -- ## Bufferline
 -- helps choose buffers by letter mnemonicks
@@ -108,10 +121,3 @@ keymap("n", "<leader>7", ":BufferLineGoToBuffer 7 <CR>", opts)
 -- ## Nvim-tree
 -- basic toggle of project-tree
 keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
-
-
-
-
-
-
-
