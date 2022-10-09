@@ -7,22 +7,21 @@ local options = {
   expandtab = true,
   smartindent = true,
 
-  relativenumber = true, 
-  nu = true,             
+  relativenumber = true,
+  nu = true,
   scrolloff = 6,
   signcolumn = 'yes',
-  updatetime = 100,
    -- this makes buffer autoread on focus
   autoread = true,
   -- NOTE: next 2 lines seems a bit broken
   -- au = CursorHold * checktime  
   termguicolors = true,
-  background = dark,
+  background = 'dark',
 
   splitbelow = true,
   splitright = true,
   fileencoding = 'utf-8',
-  undofile = true, 
+  undofile = true,
   updatetime = 300,
   cursorline = true,
 
@@ -32,6 +31,7 @@ local options = {
 }
 
 vim.opt.shortmess:append 'c'
+vim.cmd "set modifiable"
 
 for k, v in pairs(options) do
   vim.opt[k] = v
