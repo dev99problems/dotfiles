@@ -16,3 +16,6 @@ utils.safe_require('lualine').setup()
 
 -- lua-icons-config
 utils.safe_require('nvim-web-devicons').setup()
+
+-- float-terminal
+-- utils.safe_require('vim-floaterm').setup()

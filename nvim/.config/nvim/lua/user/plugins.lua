@@ -118,6 +118,9 @@ return packer.startup(function(use)
     }
   }
 
+  -- Terminal
+  use 'voldikss/vim-floaterm'
+
   -- Plug 'ThePrimeagen/vim-be-good'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'

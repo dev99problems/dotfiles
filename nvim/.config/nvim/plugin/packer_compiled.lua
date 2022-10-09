@@ -245,6 +245,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
