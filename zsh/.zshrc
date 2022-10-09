@@ -70,7 +70,7 @@ alias tm="tmux"
 alias k="kubectl"
 alias kgp="k get pods"
 
-# git
+## git
 alias g="git"
 alias gupd="git update"
 alias gupdm="git updm"
@@ -85,12 +85,15 @@ alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git c
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
 
-# gh 
+## gh 
 alias ghh="gh pr create --fill" 
 alias ghhd="gh pr create --fill -d" 
 
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
+
+## fe
+alias shs="more package.json | gp '\"scripts\":' -A 13"
 
 ## npm
 alias run="npm run"
