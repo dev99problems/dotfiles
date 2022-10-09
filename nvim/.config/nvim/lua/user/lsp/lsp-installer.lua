@@ -59,6 +59,11 @@ lspconfig.eslint.setup {
   capabilities = opts.capabilities,
 }
 
+lspconfig.gopls.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
+
 
 
 
