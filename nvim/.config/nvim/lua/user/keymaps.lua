@@ -81,12 +81,12 @@ keymap("x", "<leader><leader>p", "\"_dP", opts)
 -- # Tools --
 -- Terminal --
 -- Better terminal navigation
--- !!! instead of recommended these
+-- !!! instead of recommended
 -- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
--- !!! I have this, which let's me switch to prev/next buf
+-- !!! I have these, which let's me switch to prev/next buf
 keymap("t", "<S-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<S-l>", "<C-\\><C-N><C-w>l", term_opts)
 

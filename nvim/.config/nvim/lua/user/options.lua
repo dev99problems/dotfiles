@@ -22,7 +22,7 @@ local options = {
   splitright = true,
   fileencoding = 'utf-8',
   undofile = true,
-  updatetime = 300,
+  updatetime = 100,
   cursorline = true,
 
   -- disables the search highlightning after exit from search mode
