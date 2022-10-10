@@ -1,14 +1,12 @@
 local utils = require('user.utils')
 
--- neoscroll
-utils.safe_require('neoscroll').setup()
-
 -- colorizer-config
 utils.safe_require('colorizer').setup()
 
 -- autopairs-config
 utils.safe_require('nvim-autopairs').setup()
 
+-- Q: Is this at all needed to be setuped?
 -- require('vim-gitgutter').setup()
 
 -- lualine-config
