@@ -95,7 +95,7 @@ keymap("t", "<S-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- find files using Telescope command-line sugar.
 keymap("n", "<leader>ff", ":Telescope find_files <CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers <CR>", opts)
+keymap("n", "<leader>bb", ":Telescope buffers <CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
 keymap("n", "<M-e>", ":Telescope oldfiles <CR>", opts)
 keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find <CR>", opts)
@@ -104,10 +104,6 @@ keymap("n", "gst", ":Telescope git_status <CR>", opts)
 
 -- ## Float Term
 keymap("n", "<leader>tn", ":FloatermNew --height=0.85 --width=0.85 --wintype=float --name=default <CR>", opts)
-
--- ## Bufferline
--- helps choose buffers by letter mnemonicks
-keymap("n", "<leader>bb", ":BufferLinePick <CR>", opts)
 
 -- switching between buffers
 keymap("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
@@ -121,3 +117,9 @@ keymap("n", "<leader>7", ":BufferLineGoToBuffer 7 <CR>", opts)
 -- ## Nvim-tree
 -- basic toggle of project-tree
 keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
+-- NOTE: this doesn't work 🙃
+-- keymap("n", "<leader>ft", ":NvimTreeFindFile <CR>", opts)
+-- keymap("n", "<>", ":NvimTreeRefresh <CR>", opts)
+-- More available functions:
+-- NvimTreeResize
+-- NvimTreeCollapse
