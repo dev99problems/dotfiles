@@ -31,7 +31,9 @@ local options = {
 }
 
 vim.opt.shortmess:append 'c'
-vim.cmd "set modifiable"
+ -- auto-completion
+vim.cmd 'set completeopt=menu,menuone,noselect'
+vim.cmd 'set modifiable'
 
 for k, v in pairs(options) do
   vim.opt[k] = v
