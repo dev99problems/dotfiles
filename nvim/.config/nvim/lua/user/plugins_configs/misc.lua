@@ -9,9 +9,6 @@ utils.safe_require('nvim-autopairs').setup()
 -- Q: Is this at all needed to be setuped?
 -- require('vim-gitgutter').setup()
 
--- lualine-config
-utils.safe_require('lualine').setup()
-
 -- lua-icons-config
 utils.safe_require('nvim-web-devicons').setup()
 
