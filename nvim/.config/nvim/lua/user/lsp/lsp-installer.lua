@@ -63,3 +63,8 @@ lspconfig.gopls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
+
+lspconfig.cssls.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+}
