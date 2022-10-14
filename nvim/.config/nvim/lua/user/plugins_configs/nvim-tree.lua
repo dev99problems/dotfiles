@@ -1,6 +1,7 @@
 local utils = require('user.utils')
 local nvim_tree = utils.safe_require('nvim-tree')
 
+-- Almost fully default config
 nvim_tree.setup {
   auto_reload_on_write = true,
   disable_netrw = false,
@@ -8,14 +9,14 @@ nvim_tree.setup {
   hijack_netrw = true,
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
-  open_on_setup = false,
-  open_on_setup_file = false,
+  open_on_setup = true,
+  open_on_setup_file = true,
   open_on_tab = false,
   sort_by = 'name',
-  update_cwd = false,
-  reload_on_bufenter = false,
+  update_cwd = true,
+  reload_on_bufenter = true,
   view = {
-    width = 35,
+    width = 30,
     hide_root_folder = false,
     side = "left",
     preserve_window_proportions = true,
@@ -33,7 +34,7 @@ nvim_tree.setup {
   },
   renderer = {
     indent_markers = {
-      enable = false,
+      enable = true,
       icons = {
         corner = '└ ',
         edge = '│ ',
@@ -43,7 +44,31 @@ nvim_tree.setup {
     icons = {
       webdev_colors = true,
       git_placement = 'before',
-    },
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
+        },
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      }
+    }
   },
   hijack_directories = {
     enable = true,
@@ -51,7 +76,7 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable = false,
-    update_cwd = false,
+    update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {},
