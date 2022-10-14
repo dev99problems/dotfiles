@@ -2,6 +2,8 @@ local utils = require('user.utils')
 local telescope = utils.safe_require('telescope')
 local actions = utils.safe_require('telescope.actions')
 
+telescope.load_extension 'file_browser'
+
 telescope.setup {
   defaults = {
 
