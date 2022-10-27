@@ -11,7 +11,11 @@ telescope.setup {
     selection_caret = ' ',
     -- path_display = { 'smart' },
     layout_config = {
-      horizontal = { width = 0.9 }
+      horizontal = {
+        width = 0.95,
+        height = 0.9
+      },
+      preview_width = 0.55
     },
 
     mappings = {
