@@ -3,6 +3,7 @@ local nvim_tree = utils.safe_require('nvim-tree')
 
 -- Almost fully default config
 nvim_tree.setup {
+  -- nvim_tree_highlight_opened_files = 'none',
   auto_reload_on_write = true,
   disable_netrw = false,
   hijack_cursor = true,
@@ -75,7 +76,7 @@ nvim_tree.setup {
     auto_open = true,
   },
   update_focused_file = {
-    enable = false,
+    enable = true,
     update_cwd = true,
     ignore_list = {},
   },
@@ -93,11 +94,6 @@ nvim_tree.setup {
       warning = '',
       error = '',
     },
-  },
-  filters = {
-    dotfiles = false,
-    custom = {},
-    exclude = {},
   },
   git = {
     enable = true,
