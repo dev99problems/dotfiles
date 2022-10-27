@@ -22,12 +22,6 @@ lua require('user.lsp')
 let g:gitgutter_map_keys = 0
 let g:gitgutter_enabled = 1
 
-" a list of groups can be found at `:help nvim_tree_highlight`
-highlight NvimTreeFolderIcon guibg=blue
-" NVIM_TREE_END
-
-
-
 " -----------------------------------------------
 " RANDOM MISC useful snippets from the internet
 " -----------------------------------------------
