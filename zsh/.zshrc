@@ -1,5 +1,6 @@
+export USER=""
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/<USER>/.oh-my-zsh"
+export ZSH="/Users/${USER}/.oh-my-zsh"
 
 # theme
 ZSH_THEME="robbyrussell"
@@ -17,19 +18,10 @@ source $ZSH/oh-my-zsh.sh
 
 RPROMPT='%{$fg_bold[blue]%} %T %D % %'
 
-# Additional config of external tools
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-iterm2_print_user_vars() {
-  # extend this to add whatever
-  # you want to have printed out in the status bar
-  iterm2_set_user_var nodeVersion $(node -v)
-  iterm2_set_user_var pwd $(pwd)
-}
-
 # aliases
 ## general
 alias -g gp="grep"
+alias sz="du -hs" # stands for size
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
@@ -50,6 +42,7 @@ alias pn="pnpm"
 alias hosts="cat /etc/hosts"
 alias findpid="sudo lsof -i -P | grep" 
 alias e="exit"
+alias w="webstorm"
 
 ## deno
 alias dr="deno run"
@@ -186,6 +179,7 @@ alias liroo="ssh -i ~/.ssh/<ssh_key> <user>@<ip>"
 # PATH
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
+# NOTE: to make this work, please refer to your custom tmux/README.md
 export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 
 ## export GO
@@ -197,4 +191,3 @@ export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
 
 # rbenv
 eval "$(rbenv init - zsh)"
-
