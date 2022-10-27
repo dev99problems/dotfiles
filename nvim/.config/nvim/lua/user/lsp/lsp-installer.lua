@@ -59,12 +59,14 @@ lspconfig.eslint.setup {
   capabilities = opts.capabilities,
 }
 
-lspconfig.gopls.setup {
+lspconfig.gopls.setup {}
+
+lspconfig.cssls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
-lspconfig.cssls.setup {
+lspconfig.bashls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
