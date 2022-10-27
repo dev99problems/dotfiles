@@ -34,6 +34,14 @@ vim.opt.shortmess:append 'c'
  -- auto-completion
 vim.cmd 'set completeopt=menu,menuone,noselect'
 vim.cmd 'set modifiable'
+vim.cmd 'let g:nvim_tree_highlight_opened_files = 1'
+
+-- Material Theme
+-- vim.g.material_style = 'deep ocean'
+vim.g.material_style = 'palenight'
+-- vim.g.material_style = 'lighter'
+-- vim.g.material_style = 'darker'
+-- vim.g.material_style = 'oceanic'
 
 for k, v in pairs(options) do
   vim.opt[k] = v

@@ -134,10 +134,20 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  ["impatient.nvim"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/impatient.nvim",
+    url = "https://github.com/lewis6991/impatient.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["neoscroll.nvim"] = {
     loaded = true,
