@@ -1,18 +1,18 @@
-local status_cmp_ok, cmp = pcall(require, 'cmp')
-
-if not status_cmp_ok then
+local is_cmp_ok, cmp = pcall(require, 'cmp')
+if not is_cmp_ok then
   print 'cmp was not loaded properly!'
   return
 end
 
-local status_luasnip_ok, luasnip = pcall(require, 'luasnip')
-
-if not status_luasnip_ok then
+local is_luasnip_ok, luasnip = pcall(require, 'luasnip')
+if not is_luasnip_ok then
   print 'luasnip was not loaded properly!'
   return
 end
 
-require('luasnip/loaders/from_vscode').lazy_load()
+require('luasnip.loaders.from_vscode').lazy_load()
+-- NOTE: for some reason this doesn't really work...
+require('luasnip.loaders.from_snipmate').lazy_load({ path = { '~/.config/nvim/lua/user/snippets' } })
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -105,8 +105,8 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp = '[LSP]',
         luasnip = '[Snippet]',
-        buffer = '[Buffer]',
         path = '[Path]',
+        buffer = '[Buffer]',
       })[entry.source.name]
       return vim_item
     end,
@@ -114,8 +114,8 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'path' }, -- keyword_length = <num> can be set for min num. of chars
     { name = 'buffer' },
-    { name = 'path' },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
