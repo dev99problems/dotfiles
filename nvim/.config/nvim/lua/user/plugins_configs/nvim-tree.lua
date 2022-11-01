@@ -63,9 +63,9 @@ nvim_tree.setup {
           unstaged = "✗",
           staged = "✓",
           unmerged = "",
-          renamed = "➜",
-          untracked = "★",
-          deleted = "",
+          renamed = "R",
+          untracked = "U",
+          deleted = "D",
           ignored = "◌",
         },
       }
@@ -77,7 +77,8 @@ nvim_tree.setup {
   },
   update_focused_file = {
     enable = true,
-    update_cwd = true,
+    -- next can be used for having only current file dir in scope
+    -- update_cwd = true,
     ignore_list = {},
   },
   ignore_ft_on_setup = {},
