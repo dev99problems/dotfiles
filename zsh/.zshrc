@@ -5,6 +5,8 @@ export ZSH="/Users/${USER}/.oh-my-zsh"
 # theme
 ZSH_THEME="robbyrussell"
 
+. ~/.z.sh
+
 # zsh plugins
 plugins=(
   git
@@ -124,7 +126,9 @@ export NVM_DIR="$HOME/.nvm"
 # configs
 ##nnn
 export NNN_FIFO='/tmp/nnn.fifo'
-export NNN_PLUG='j:autojump;h:here;p:preview-tui'
+# export NNN_PLUG='j:autojump;h:here;p:preview-tui'
+# NOTE: temporarily disabled my custom `here`
+export NNN_PLUG='j:autojump;g:gitroot;p:preview-tui'
 export VISUAL=nvim
 export EDITOR=nvim
 
