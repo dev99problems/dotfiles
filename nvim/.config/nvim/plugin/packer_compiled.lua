@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
   },
+  indentLine = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/indentLine",
+    url = "https://github.com/Yggdroot/indentLine"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/lualine.nvim",
@@ -195,6 +200,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
   },
+  ["nvim-ufo"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/nvim-ufo",
+    url = "https://github.com/kevinhwang91/nvim-ufo"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -225,6 +235,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["promise-async"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/promise-async",
+    url = "https://github.com/kevinhwang91/promise-async"
+  },
   ["solarized.nvim"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/solarized.nvim",
@@ -244,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
   },
   ["vim-commentary"] = {
     loaded = true,

@@ -7,6 +7,7 @@ require('user.plugins_configs.treesitter')
 require('user.plugins_configs.nvim-tree')
 require('user.plugins_configs.lualine')
 require('user.plugins_configs.material')
+require('user.plugins_configs.nvim-ufo')
 -- winbar requires NeoVim nightly, aka 0.9.x
 -- require('user.plugins.winbar')
 
