@@ -1,4 +1,4 @@
-" To update currently open vim, with updated config 
+" To update currently open vim, with updated config
 command Nvupd execute "source $MYVIMRC"
 
 " User.*
@@ -30,7 +30,10 @@ autocmd TermOpen * startinsert
 
 " Adds synchronisation between NvimTree and opened file,
 " basically, openes the current file's folder
-autocmd BufEnter * lcd %:p:h
+" NOTE: this stuff worked cool but together with Telescope,
+" and configured nvim-tree to highlight current file, this looks
+" redundant and should be REMOVED in near future
+" autocmd BufEnter * lcd %:p:h
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
