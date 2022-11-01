@@ -14,7 +14,7 @@ local options = {
    -- this makes buffer autoread on focus
   autoread = true,
   -- NOTE: next 2 lines seems a bit broken
-  -- au = CursorHold * checktime  
+  -- au = CursorHold * checktime
   termguicolors = true,
   background = 'dark',
 
