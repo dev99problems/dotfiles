@@ -15,5 +15,3 @@ utils.safe_require('nvim-web-devicons').setup()
 -- impatient-vim
 utils.safe_require('impatient')
 
--- float-terminal
--- utils.safe_require('vim-floaterm').setup()
