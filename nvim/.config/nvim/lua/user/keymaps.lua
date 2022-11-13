@@ -33,10 +33,7 @@ keymap("n", "<S-Down>", ":resize -4<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
- -- open a terminal
-keymap("n", "<leader>t", ":terminal <CR>", opts)
-
- -- close buffers
+-- close buffers
 -- keymap("n", "<leader>bd", ":bd <CR>", opts)
 -- !!! trying smth. a bit simpler
 keymap("n", "<leader>d", ":bd <CR>", opts)
@@ -102,9 +99,11 @@ keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find <CR>", opts)
 keymap("n", "<leader>fb", ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 keymap("n", "gst", ":Telescope git_status <CR>", opts)
 
--- ## Float Term
-keymap("n", "<leader>tn", ":FloatermNew --height=0.85 --width=0.85 --wintype=float --name=default <CR>", opts)
+-- ## Floaterm
+keymap("n", "<leader>t", ":FloatermToggle <CR>", opts)
+keymap("t", "<leader>t", "<C-\\><C-n>:FloatermToggle <CR>", opts)
 
+-- ## Bufferline
 -- switching between buffers
 keymap("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
 keymap("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
