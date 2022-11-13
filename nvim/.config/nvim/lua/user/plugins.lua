@@ -45,7 +45,7 @@ return packer.startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/popup.nvim'
 
-  -- Telescope
+  -- telescope
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
@@ -76,7 +76,6 @@ return packer.startup(function(use)
   }
   use 'rafamadriz/friendly-snippets'
 
-
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
@@ -88,14 +87,14 @@ return packer.startup(function(use)
   use { 'junegunn/fzf', run = ':call fzf#install()' }
   use { 'junegunn/fzf.vim' }
 
-  -- Treesitter
+  -- treesitter
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-context'
 
-  -- Power lines
+  -- power lines
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -106,11 +105,11 @@ return packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
-  -- Icons
+  -- icons
   use 'ryanoasis/vim-devicons'
   use 'kyazdani42/nvim-web-devicons'
 
-  -- File Trees
+  -- file trees
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -118,10 +117,10 @@ return packer.startup(function(use)
     }
   }
 
-  -- Terminal
+  -- terminal
   use 'voldikss/vim-floaterm'
 
-  -- Perf
+  -- perf
   use 'lewis6991/impatient.nvim'
 
   -- Plug 'ThePrimeagen/vim-be-good'
@@ -129,20 +128,20 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
 
-  -- Scroll
+  -- scroll
   use 'karb94/neoscroll.nvim'
 
-  -- Folding & Indentation
+  -- folding & Indentation
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-  use 'Yggdroot/indentLine'
+  -- use 'Yggdroot/indentLine'
 
-  -- Trouble
+  -- trouble
   use {
     'folke/trouble.nvim',
     requires = 'kyazdani42/nvim-web-devicons'
   }
 
-  -- Themes
+  -- themes
   use 'gruvbox-community/gruvbox'
   use {
     'dracula/vim',
@@ -155,8 +154,9 @@ return packer.startup(function(use)
   }
   use 'shaunsingh/solarized.nvim'
   use 'marko-cerovac/material.nvim'
+  use 'sainnhe/everforest'
 
-  -- Misc
+  -- misc
   use 'ThePrimeagen/vim-be-good'
 
   if PACKER_BOOTSTRAP then
