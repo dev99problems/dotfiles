@@ -49,11 +49,15 @@ alias w="webstorm"
 ## deno
 alias dr="deno run"
 
+## python
+alias py="python3"
+
 ## nvim
 alias nv="nvim"
 
 ## rbenv
 alias rbe="rbenv"
+alias rbls="rbenv versions"
 
 ## tmux
 alias tma="tmux attach -t $1"
@@ -193,5 +197,12 @@ export PATH="$PATH:/usr/local/go/bin"
 ## NOTE: if I'm not mistaken this was needed for sowme tmux update?!?
 export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
 
-# rbenv
+## export pip
+export PATH="$PATH:/Users/${USER}/Library/Python/3.8/bin"
+
+## deno
+export DENO_INSTALL="/Users/${USER}/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+## rbenv
 eval "$(rbenv init - zsh)"
