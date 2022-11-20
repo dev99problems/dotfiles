@@ -17,12 +17,12 @@ end
 
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd [[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]]
+-- vim.cmd [[
+--   augroup packer_user_config
+--     autocmd!
+--     autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--   augroup end
+-- ]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, 'packer')
@@ -68,6 +68,12 @@ return packer.startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  -- NOTE: tried to make this fly, but didn't succeed. For now
+  -- use {
+  --   'autozimu/LanguageClient-neovim',
+  --   branch = 'next',
+  --   run = 'bash install.sh'
+  -- }
 
   -- snippets
   use {
@@ -133,7 +139,6 @@ return packer.startup(function(use)
 
   -- folding & Indentation
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
-  -- use 'Yggdroot/indentLine'
 
   -- trouble
   use {
@@ -157,6 +162,8 @@ return packer.startup(function(use)
   use 'sainnhe/everforest'
 
   -- misc
+  use 'lukas-reineke/indent-blankline.nvim' -- this one is so good!
+  use 'mhinz/vim-startify'
   use 'ThePrimeagen/vim-be-good'
 
   if PACKER_BOOTSTRAP then
