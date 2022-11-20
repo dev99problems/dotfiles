@@ -98,7 +98,7 @@ nvim_tree.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false, -- this prevents hiding ignored files & folders
     timeout = 400,
   },
   actions = {
