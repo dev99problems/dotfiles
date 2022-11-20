@@ -26,7 +26,7 @@ local options = {
   cursorline = true,
 
   -- disables the search highlightning after exit from search mode
-  hlsearch = false,
+  hlsearch = true,
   -- incsearch = true,
 }
 
@@ -34,6 +34,8 @@ vim.opt.shortmess:append 'c'
  -- auto-completion
 vim.cmd 'set completeopt=menu,menuone,noselect'
 vim.cmd 'set modifiable'
+-- make the cursor blink
+vim.cmd 'set guicursor+=a:-blinkwait175-blinkoff150-blinkon175'
 vim.cmd 'let g:nvim_tree_highlight_opened_files = 1'
 
 for k, v in pairs(options) do

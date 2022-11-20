@@ -1,8 +1,8 @@
 local utils = require('user.utils')
 
 -- local theme = 'solarized'
--- local theme = 'dracula'
-local theme = 'material'
+local theme = 'dracula'
+-- local theme = 'material'
 -- local theme = 'everforest'
 
 local theme_param = 'colorscheme ' .. theme
