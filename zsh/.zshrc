@@ -22,7 +22,7 @@ RPROMPT='%{$fg_bold[blue]%} %T %D % %'
 
 # aliases
 ## general
-alias -g gp="grep"
+alias -g gr="grep"
 alias sz="du -hs" # stands for size
 
 alias pbc="pbcopy"
@@ -56,6 +56,7 @@ alias py="python3"
 alias nv="nvim"
 
 ## rbenv
+alias r="/Users/${USER}/.rbenv/shims/ruby"
 alias rbe="rbenv"
 alias rbls="rbenv versions"
 
@@ -87,6 +88,9 @@ alias gdu='git add -N . && git diff'
 ## gh
 alias ghh="gh pr create --fill"
 alias ghhd="gh pr create --fill -d"
+
+## git peek by Jarred Sumner
+alias gp="git peek"
 
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
