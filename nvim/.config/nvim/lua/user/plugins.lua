@@ -15,7 +15,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
   vim.cmd [[packadd packer.nvim]]
 end
 
-
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 -- vim.cmd [[
 --   augroup packer_user_config
@@ -86,7 +85,7 @@ return packer.startup(function(use)
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
   }
-  use 'airblade/vim-gitgutter'
+  use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
 
   -- fzf
@@ -110,7 +109,6 @@ return packer.startup(function(use)
     tag = 'v2.*',
     requires = 'kyazdani42/nvim-web-devicons'
   }
-
   -- icons
   use 'ryanoasis/vim-devicons'
   use 'kyazdani42/nvim-web-devicons'
