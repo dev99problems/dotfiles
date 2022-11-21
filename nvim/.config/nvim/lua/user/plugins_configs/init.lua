@@ -11,6 +11,7 @@ require('user.plugins_configs.nvim_ufo')
 require('user.plugins_configs.floaterm')
 require('user.plugins_configs.indent_blankline')
 require('user.plugins_configs.startify')
+require('user.plugins_configs.gitsigns')
 -- require('user.plugins_configs.solar_client')
 -- winbar requires NeoVim nightly, aka 0.9.x
 -- require('user.plugins.winbar')

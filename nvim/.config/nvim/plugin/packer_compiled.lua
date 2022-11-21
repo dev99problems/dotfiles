@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -143,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/impatient.nvim",
     url = "https://github.com/lewis6991/impatient.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -279,11 +289,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
-  },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
   },
   ["vim-repeat"] = {
     loaded = true,
