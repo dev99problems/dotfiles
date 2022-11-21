@@ -1,6 +1,3 @@
-" To update currently open vim, with updated config
-command Nvupd execute "source $MYVIMRC"
-
 " User.*
 lua require('user.options')
 
@@ -17,14 +14,6 @@ lua require('user.cmp')
 
 lua require('user.lsp')
 
-
-" vim-gitgugger-config
-let g:gitgutter_map_keys = 0
-let g:gitgutter_enabled = 1
-
-" TEMP:
-" this shows signs in MD but works poortly with vert. indentation
-let g:conceallevel = 0
 
 " -----------------------------------------------
 " RANDOM MISC useful snippets from the internet
