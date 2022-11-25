@@ -198,7 +198,7 @@ export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 export PATH="$PATH:/usr/local/go/bin"
 
 ## export the newest bash 5.x
-## NOTE: if I'm not mistaken this was needed for sowe tmux update?!?
+## NOTE: if I'm not mistaken this was needed for some tmux update?!?
 export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
 
 ## export pip
