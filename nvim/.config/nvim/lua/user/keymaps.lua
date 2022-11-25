@@ -33,12 +33,15 @@ keymap("n", "<S-Down>", ":resize -4<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
+-- # buffers
 -- close buffers
--- keymap("n", "<leader>bd", ":bd <CR>", opts)
--- !!! trying smth. a bit simpler
 keymap("n", "<leader>d", ":bd <CR>", opts)
+-- focus prev. open buffer
+keymap("n", "<C-p>", ":b# <CR>", opts)
+-- open most recently closed buffer
+keymap("n", "<C-o>", ":e # <CR>", opts)
 
- -- close windows
+-- close windows
 keymap("n", "<leader>wd", ":bd <CR>", opts)
 
 -- show registers
@@ -50,6 +53,11 @@ keymap("n", "<C-i>", ":nohlsearch <CR>", opts)
 -- save file
 keymap("n", "SS", ":w <CR>", opts)
 keymap("i", "SS", "<C-c>:w <CR>", opts)
+
+-- split and closing it
+keymap("n", "<leader>vs", ":vsplit <CR>", opts)
+keymap("n", "<leader>vc", ":close <CR>", opts)
+
 --|||||----------------------------|||||--
 
 
@@ -72,7 +80,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
--- greatest remap ever, or not...
+- greatest remap ever, or not 😵
 keymap("v", "p", '"_dP', opts)
 --|||||----------------------------|||||--
 
@@ -110,7 +118,17 @@ keymap("n", "<leader>bb", ":Telescope buffers <CR>", opts)
 keymap("n", "<M-e>", ":Telescope oldfiles <CR>", opts)
 keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find <CR>", opts)
 keymap("n", "gst", ":Telescope git_status <CR>", opts)
-keymap("n", "gr", ":Telescope lsp_references <CR>", opts)
+-- lsp
+keymap("n", "<leader>lr", ":Telescope lsp_references <CR>", opts)
+keymap("n", "<leader>ldf", ":Telescope lsp_definitions <CR>", opts)
+keymap("n", "<leader>lds", ":Telescope lsp_document_symbols <CR>", opts)
+keymap("n", "<leader>lws", ":Telescope lsp_workspace_symbols <CR>", opts)
+-- registers
+keymap("n", "<leader>rr", ":Telescope registers <CR>", opts)
+-- yank history
+keymap("n", "<leader>ne", ":Telescope neoclip <CR>", opts)
+-- commands
+keymap("n", "<leader>fch", ":Telescope commands_history <CR>", opts)
 
 -- ## floaterm
 keymap("n", "<M-y>", ":FloatermToggle <CR>", opts)
@@ -125,10 +143,12 @@ keymap("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
 keymap("n", "<leader>3", ":BufferLineGoToBuffer 3 <CR>", opts)
 keymap("n", "<leader>4", ":BufferLineGoToBuffer 4 <CR>", opts)
 keymap("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
-keymap("n", "<leader>6", ":BufferLineGoToBuffer 6 <CR>", opts)
-keymap("n", "<leader>7", ":BufferLineGoToBuffer 7 <CR>", opts)
+keymap("n", "KK", ":BufferLineMoveNext <CR>", opts)
+keymap("n", "JJ", ":BufferLineMovePrev <CR>", opts)
+keymap("n", "<leader>blr", ":BufferLineCloseRight <CR>", opts)
+keymap("n", "<leader>bll", ":BufferLineCloseLeft <CR>", opts)
 
--- ## Nvim-tree
+-- ## nvim-tree
 -- basic toggle of project-tree
 keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- NOTE: this doesn't work 🙃
