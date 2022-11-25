@@ -24,6 +24,7 @@ local options = {
   undofile = true,
   updatetime = 100,
   cursorline = true,
+  spell = true,
 
   -- disables the search highlightning after exit from search mode
   hlsearch = true,
@@ -37,6 +38,7 @@ vim.cmd 'set modifiable'
 -- make the cursor blink
 vim.cmd 'set guicursor+=a:-blinkwait175-blinkoff150-blinkon175'
 vim.cmd 'let g:nvim_tree_highlight_opened_files = 1'
+vim.cmd 'set winbar=%f'
 
 for k, v in pairs(options) do
   vim.opt[k] = v
