@@ -3,6 +3,7 @@ local telescope = utils.safe_require('telescope')
 local actions = utils.safe_require('telescope.actions')
 
 telescope.load_extension 'file_browser'
+telescope.load_extension 'neoclip'
 
 telescope.setup {
   defaults = {
