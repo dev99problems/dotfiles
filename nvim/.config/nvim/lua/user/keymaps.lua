@@ -80,7 +80,7 @@ keymap("v", ">", ">gv", opts)
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 
-- greatest remap ever, or not 😵
+-- greatest remap ever, or not 😵
 keymap("v", "p", '"_dP', opts)
 --|||||----------------------------|||||--
 
