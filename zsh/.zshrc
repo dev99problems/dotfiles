@@ -96,7 +96,7 @@ alias gp="git peek"
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
 
 ## fe
-alias shs="more package.json | gp '\"scripts\":' -A 13"
+alias scrpt="more package.json | gp '\"scripts\":' -A 13"
 
 ## npm
 alias run="npm run"
@@ -198,7 +198,7 @@ export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 export PATH="$PATH:/usr/local/go/bin"
 
 ## export the newest bash 5.x
-## NOTE: if I'm not mistaken this was needed for sowme tmux update?!?
+## NOTE: if I'm not mistaken this was needed for sowe tmux update?!?
 export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
 
 ## export pip
@@ -210,3 +210,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 ## rbenv
 eval "$(rbenv init - zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/${USER}/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
