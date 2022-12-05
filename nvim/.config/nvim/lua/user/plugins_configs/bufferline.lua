@@ -12,7 +12,7 @@ end
 -- OR https://github.com/akinsho/bufferline.nvim/blob/main/doc/bufferline.txt
 bufferline.setup {
   options = {
-    mode = 'buffers',
+    mode = 'buffers', -- 'tabs' | 'buffers'
     numbers = 'ordinal',
     name_formatter = function()
       -- name                | str        | the basename of the active file
@@ -31,7 +31,8 @@ bufferline.setup {
       {
         filetype = 'NvimTree',
         text = get_current_dir(),
-        text_align = 'center'
+        text_align = 'center',
+        separator = true
       }
     },
     -- color_icons = true | false, -- whether or not to add the filetype icon highlights
