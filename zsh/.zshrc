@@ -84,13 +84,21 @@ alias gmm="git cho main"
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
+alias gsta='git add . && git stash'
+alias gunsta='git unstash && git reset .'
 
 ## gh
 alias ghh="gh pr create --fill"
 alias ghhd="gh pr create --fill -d"
 
+## nvm
+alias nvc="nvm current"
+
 ## git peek by Jarred Sumner
 alias gp="git peek"
+
+## alias for gitui
+alias gi="gitui"
 
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
@@ -214,3 +222,10 @@ eval "$(rbenv init - zsh)"
 # pnpm
 export PNPM_HOME="/Users/${USER}/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# bun completions
+[ -s "/Users/${USER}/.bun/_bun" ] && source "/Users/${USER}/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
