@@ -17,8 +17,8 @@ vim.o.foldlevelstart = 99
 -- zE — eliminate all folds in the window
 -- zo — open one fold
 
--- za — fond/unfold a paragraph under cursor
--- zA — fond/unfold a paragraph under cursor recursively 🤯
+-- za — fold/unfold a paragraph under cursor
+-- zA — fold/unfold a paragraph under cursor recursively 🤯
 
 -- ## Advanced
 -- Using `kevinhwang91/nvim-ufo` plugin for folding/unfolding there are 2 additional hotkeys:

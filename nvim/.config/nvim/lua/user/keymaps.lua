@@ -68,9 +68,6 @@ keymap("n", "N", "Nzz", opts)
 -- half-way up/down + zz
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
-
-
-
 --|||||----------------------------|||||--
 
 
