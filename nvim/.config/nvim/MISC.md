@@ -14,3 +14,4 @@ There will be some docs and articles and cool projects refs for `nvim`
 * [TJ](https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/lua/tj/plugins.lua)
 * [Elijah Manor](https://github.com/elijahmanor/dotfiles/blob/master/nvim/.config/nvim/init.vim)
 * [Bashbunni](https://github.com/bashbunni/dotfiles/blob/mac/.config/nvim/init.lua)
+* [blueyed](https://github.com/blueyed/dotfiles/blob/001ace8cd6c72151ba6880991e83aa2d481547ae/vimrc#L2773-L2789) # method for choosing projects
