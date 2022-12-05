@@ -58,6 +58,19 @@ keymap("i", "SS", "<C-c>:w <CR>", opts)
 keymap("n", "<leader>vs", ":vsplit <CR>", opts)
 keymap("n", "<leader>vc", ":close <CR>", opts)
 
+-- paste yank into the eol
+keymap("n", "!", "A <esc>p", opts)
+
+-- n/N while search + zz
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+
+-- half-way up/down + zz
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+
+
+
 --|||||----------------------------|||||--
 
 
@@ -161,3 +174,10 @@ keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- ## startify
 keymap("n", "<M-s>s", ":SSave! <CR>", opts)
 keymap("n", "<M-l>l", ":SLoad!", opts)
+-- lsp
+keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true }) <CR>", opts)
+keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>', opts)
+keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
+keymap('n', 'K', ':lua vim.lsp.buf.hover()<CR>', opts)
+keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
+keymap('n', 'gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
