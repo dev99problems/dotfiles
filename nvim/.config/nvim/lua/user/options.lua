@@ -24,7 +24,8 @@ local options = {
   undofile = true,
   updatetime = 100,
   cursorline = true,
-  spell = true,
+  -- nest is just for reference
+  -- spell = true,
 
   -- disables the search highlightning after exit from search mode
   hlsearch = true,
