@@ -23,7 +23,7 @@ RPROMPT='%{$fg_bold[blue]%} %T %D % %'
 # aliases
 ## general
 alias -g gr="grep"
-alias sz="du -hs" # stands for size
+alias sz="du -hs" # stands for getting the folder size
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
@@ -37,6 +37,7 @@ alias dkimg="dk images"
 alias dkcnt="dk container ls"
 alias finder="ofd"
 alias here="ofd"
+alias cph="pwd | pbc" # copy current path to clipboard
 
 alias prev="cd -"
 alias npmg="npm ls -g --depth=0"
@@ -81,6 +82,7 @@ alias gdifm="git diffmain"
 alias grei="git rebase -i origin/master"
 alias gm="git cho master"
 alias gmm="git cho main"
+alias gl="git last"
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
@@ -229,3 +231,6 @@ export PATH="$PNPM_HOME:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/${USER}/.bun/_bun" ] && source "/Users/${USER}/.bun/_bun"
