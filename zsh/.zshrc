@@ -1,6 +1,6 @@
 export USER=""
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/${USER}/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # theme
 ZSH_THEME="robbyrussell"
@@ -57,7 +57,7 @@ alias py="python3"
 alias nv="nvim"
 
 ## rbenv
-alias r="/Users/${USER}/.rbenv/shims/ruby"
+alias r="/Users/$USER/.rbenv/shims/ruby"
 alias rbe="rbenv"
 alias rbls="rbenv versions"
 
@@ -217,25 +217,25 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
 
 ## export pip
-export PATH="$PATH:/Users/${USER}/Library/Python/3.8/bin"
+export PATH="$PATH:/Users/$USER/Library/Python/3.8/bin"
 
 ## deno
-export DENO_INSTALL="/Users/${USER}/.deno"
+export DENO_INSTALL="/Users/$USER/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ## rbenv
 eval "$(rbenv init - zsh)"
 
 # pnpm
-export PNPM_HOME="/Users/${USER}/Library/pnpm"
+export PNPM_HOME="/Users/$USER/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 # bun completions
-[ -s "/Users/${USER}/.bun/_bun" ] && source "/Users/${USER}/.bun/_bun"
+[ -s "/Users/$USER/.bun/_bun" ] && source "/Users/$USER/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
-[ -s "/Users/${USER}/.bun/_bun" ] && source "/Users/${USER}/.bun/_bun"
+[ -s "/Users/$USER/.bun/_bun" ] && source "/Users/$USER/.bun/_bun"
