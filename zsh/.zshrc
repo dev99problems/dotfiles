@@ -110,6 +110,11 @@ alias gi="gitui"
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
 
+## git project loc
+# git ls-files | xargs cat | wc -l
+# or even a shorter variant, like
+# git ls-files | xargs wc -l
+
 ## fe
 alias scrpt="more package.json | gp '\"scripts\":' -A 13"
 
