@@ -89,6 +89,11 @@ alias gdu='git add -N . && git diff'
 alias gsta='git add . && git stash'
 alias gunsta='git unstash && git reset .'
 
+## git-extras
+alias gsummary="/Users/$USER/.git_extras/git_summary"
+alias gmerged="/Users/$USER/.git_extras/git_merged"
+alias gunmerged="/Users/$USER/.git_extras/git_unmerged"
+
 ## gh
 alias ghh="gh pr create --fill"
 alias ghhd="gh pr create --fill -d"

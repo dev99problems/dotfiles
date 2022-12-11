@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# https://github.com/tj/git-extras/blob/master/bin/git-show-merged-branches
+
+git_extra_default_branch() {
+    local extras_default_branch init_default_branch
+    extras_default_branch=$(git config --get git-extras.default-branch)
+    init_default_branch=$(git config --get init.defaultBranch)
+    if [ -n "$extras_default_branch" ]; then
+        echo "$extras_default_branch"
+    elif [ -n "$init_default_branch" ]; then
+        echo "$init_default_branch"
+    else
+        echo "main"
+    fi
+}
+
+git branch --merged | grep -v "\*" | grep -v $(git_extra_default_branch) | tr -d ' '
