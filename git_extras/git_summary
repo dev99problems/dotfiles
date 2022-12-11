@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 #https://github.com/tj/git-extras/blob/master/bin/git-summary
 
+# NOTE: had to inline the content of `git-root` into this file
+# and wrap the last piece into a function, to make script work properly
+# and look up for a proper git root!
 git_root() {
   git rev-parse --show-toplevel
 }
