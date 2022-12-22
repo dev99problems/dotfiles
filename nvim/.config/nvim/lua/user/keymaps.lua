@@ -182,13 +182,11 @@ keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- ## startify
 keymap("n", "<M-s>s", ":SSave! <CR>", opts)
 keymap("n", "<M-l>l", ":SLoad!", opts)
+
 -- ## minimap
 keymap('n', 'mmo', ':lua MiniMap.open()<CR>', opts)
 keymap('n', 'mmc', ':lua MiniMap.close()<CR>', opts)
+
 -- lsp
 keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true }) <CR>", opts)
-keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>', opts)
 keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
-keymap('n', 'K', ':lua vim.lsp.buf.hover()<CR>', opts)
-keymap('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>', opts)
-keymap('n', 'gl', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>', opts)
