@@ -182,6 +182,9 @@ keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- ## startify
 keymap("n", "<M-s>s", ":SSave! <CR>", opts)
 keymap("n", "<M-l>l", ":SLoad!", opts)
+-- ## minimap
+keymap('n', 'mmo', ':lua MiniMap.open()<CR>', opts)
+keymap('n', 'mmc', ':lua MiniMap.close()<CR>', opts)
 -- lsp
 keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true }) <CR>", opts)
 keymap('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>', opts)
