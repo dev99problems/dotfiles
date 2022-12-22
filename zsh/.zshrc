@@ -22,7 +22,6 @@ RPROMPT='%{$fg_bold[blue]%} %T %D % %'
 
 # aliases
 ## general
-alias -g gr="grep"
 alias sz="du -hs" # stands for getting the folder size
 
 alias pbc="pbcopy"
@@ -79,10 +78,13 @@ alias gst="git status"
 alias gsend="git pupu -f"
 alias gdif="git diffmaster"
 alias gdifm="git diffmain"
-alias grei="git rebase -i origin/master"
+alias gri="git rebase -i origin/master"
+alias grim="git rebase -i origin/main"
 alias gm="git cho master"
 alias gmm="git cho main"
 alias gl="git last"
+alias gn="git new"
+alias gr="git rename"
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
@@ -96,7 +98,7 @@ alias gunmerged="/Users/$USER/.git_extras/git_unmerged"
 
 ## gh
 alias ghh="gh pr create --fill"
-alias ghhd="gh pr create --fill -d"
+alias ghhd="gh pr create --fill --draft"
 
 ## nvm
 alias nvc="nvm current"
@@ -132,7 +134,7 @@ alias zupd="source ~/.zshrc"
 
 alias nvcon="nvim ~/.config/nvim/init.vim"
 
-alias gitcon="nvim ~/.gitconfig"
+alias gcon="nvim ~/.gitconfig"
 
 alias tcon="nvim ~/.tmux.conf"
 alias tupd="tmux source ~/.tmux.conf"
