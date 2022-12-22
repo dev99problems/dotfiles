@@ -33,6 +33,11 @@ keymap("n", "<S-Down>", ":resize -4<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
+
+-- NOTE: this should be a custom command!!!
+-- select block in js
+-- keymap("n", "<leader>vp", ":vertical resize +2<CR>", opts)
+
 -- # buffers
 -- close buffers
 keymap("n", "<leader>d", ":bd <CR>", opts)
@@ -68,6 +73,12 @@ keymap("n", "N", "Nzz", opts)
 -- half-way up/down + zz
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
+
+-- better line jump remapping
+keymap("n", "0", "^", opts)
+keymap("n", "$", "g_", opts)
+keymap("n", "^", "0", opts)
+keymap("n", "g_", "$", opts)
 --|||||----------------------------|||||--
 
 
