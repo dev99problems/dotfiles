@@ -164,6 +164,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["mini.map"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/mini.map",
+    url = "https://github.com/echasnovski/mini.map"
+  },
   ["neoscroll.nvim"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
