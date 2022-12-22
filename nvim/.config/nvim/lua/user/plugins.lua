@@ -67,6 +67,10 @@ return packer.startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use({
+    'glepnir/lspsaga.nvim',
+    branch = 'main',
+  })
 
   -- NOTE: tried to make this fly, but didn't succeed. For now
   -- use {
