@@ -9,6 +9,9 @@ There will be some docs and articles and cool projects refs for `nvim`
 * [work with GH from nvim](https://github.com/pwntester/octo.nvim) — *** You should check this out
 * [Set of Mini plugins with a lot of Lua/Telescope integrtions](https://github.com/echasnovski/mini.nvim/blob/main/lua/mini/fuzzy.lua#L154)
 
+## Articles
+* [Vim motions](https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/moving-blazingly-fast-with-the-core-vim-motions/)
+
 
 ## Other peoples configs
 * [TJ](https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/lua/tj/plugins.lua)

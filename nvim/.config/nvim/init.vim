@@ -39,6 +39,9 @@ autocmd BufReadPost *
 " and autoread them on focus
 au FocusLost,WinLeave * :silent! w
 
+" # pseudo-code to enable winbar only for reg buffers and avoid for nvim-tree, terminal, etc.
+" au VimEnter,BufWinEnter * if &buftype == ““ | setlocal winbar=%f | endif
+
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
@@ -57,7 +60,7 @@ function! AutoHighlightToggle()
     au!
     au CursorHold * let @/ = '\V\<'.escape(expand('<cword>'), '\').'\>'
     augroup end
-    setl updatetime=500
+    setl updatetime=250
     echo 'Highlight current word: ON'
   return 1
  endif
