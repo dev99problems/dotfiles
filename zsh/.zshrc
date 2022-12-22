@@ -219,6 +219,9 @@ export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 ## export GO
 export PATH="$PATH:/usr/local/go/bin"
 
+## export ngrok
+export PATH="$PATH:/usr/local/ngrok"
+
 ## export the newest bash 5.x
 ## NOTE: if I'm not mistaken this was needed for some tmux update?!?
 export PATH="$PATH:/usr/local/Cellar/bash/5.1.8/bin"
