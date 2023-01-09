@@ -85,6 +85,7 @@ alias gmm="git cho main"
 alias gl="git last"
 alias gn="git new"
 alias gr="git rename"
+alias grel="git reset ."
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
@@ -97,6 +98,7 @@ alias gmerged="/Users/$USER/.git_extras/git_merged"
 alias gunmerged="/Users/$USER/.git_extras/git_unmerged"
 
 ## gh
+alias ghp="gh markdown-preview --light-mode"
 alias ghh="gh pr create --fill"
 alias ghhd="gh pr create --fill --draft"
 
@@ -109,6 +111,9 @@ alias gp="git peek"
 ## alias for gitui
 alias gi="gitui"
 
+## alias for ts-node
+alias tsn="ts-node"
+
 ## ffmpeg
 alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./converted.mov"
 
@@ -118,7 +123,7 @@ alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./conver
 # git ls-files | xargs wc -l
 
 ## fe
-alias scrpt="more package.json | gp '\"scripts\":' -A 13"
+alias scrpt="more package.json | grep '\"scripts\":' -A 13"
 
 ## npm
 alias run="npm run"
