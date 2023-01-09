@@ -23,7 +23,7 @@ local options = {
   fileencoding = 'utf-8',
   undofile = true,
   updatetime = 100,
-  cursorline = true,
+  -- cursorline = true,
   -- next is just for reference
   -- spell = true,
 
