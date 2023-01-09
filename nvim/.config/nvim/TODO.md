@@ -1,6 +1,4 @@
----------
-Current plans
----------
+# Current plans
 
 ## TODO:
 `[ ]` configure `keymaps` for `neoclip`
