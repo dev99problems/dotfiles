@@ -10,9 +10,8 @@ if not is_luasnip_ok then
   return
 end
 
+require('luasnip.loaders.from_vscode').lazy_load({ paths = '~/.config/nvim/lua/user/snippets' })
 require('luasnip.loaders.from_vscode').lazy_load()
--- NOTE: for some reason this doesn't really work...
-require('luasnip.loaders.from_snipmate').lazy_load({ path = { '~/.config/nvim/lua/user/snippets' } })
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -51,7 +50,7 @@ local kind_icons = {
 cmp.setup {
   snippet = {
     expand = function(args)
-      luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      luasnip.lsp_expand(args.body)
     end,
   },
   window = {
@@ -103,10 +102,11 @@ cmp.setup {
       vim_item.kind = string.format('%s', kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        nvim_lsp = '[LSP]',
-        luasnip = '[Snippet]',
-        path = '[Path]',
-        buffer = '[Buffer]',
+        nvim_lsp = '[lsp]',
+        luasnip = '[snip]',
+        cmp_tabnine = '[tab9]',
+        path = '[path]',
+        buffer = '[buffer]',
       })[entry.source.name]
       return vim_item
     end,
@@ -114,6 +114,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'cmp_tabnine' },
     { name = 'path' }, -- keyword_length = <num> can be set for min num. of chars
     { name = 'buffer' },
   },
