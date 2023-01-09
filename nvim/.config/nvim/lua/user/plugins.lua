@@ -47,7 +47,8 @@ return packer.startup(function(use)
   -- telescope
   use {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
+    branch = '0.1.x', -- this one fixes issue with search_in_buf
+    -- tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
@@ -58,6 +59,7 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/cmp-nvim-lsp'
+  use 'saadparwaiz1/cmp_luasnip'
   use {
     'tzachar/cmp-tabnine',
     run='./install.sh',
@@ -82,9 +84,12 @@ return packer.startup(function(use)
   -- snippets
   use {
     'L3MON4D3/LuaSnip',
-    tag = 'v<CurrentMajor>.*'
+    tag = 'v1.1.0'
   }
   use 'rafamadriz/friendly-snippets'
+  -- use 'MarcWeber/vim-addon-mw-utils'
+  -- use 'tomtom/tlib_vim'
+  -- use 'garbas/vim-snipmate'
 
   use {
     'windwp/nvim-autopairs',

@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/cmp-tabnine",
     url = "https://github.com/tzachar/cmp-tabnine"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   dracula = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/dracula",
