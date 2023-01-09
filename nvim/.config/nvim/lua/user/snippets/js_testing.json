@@ -1,0 +1,42 @@
+{
+  "jest:expect": {
+    "prefix": "ex",
+    "body": "expect($0)",
+    "description": "JCustom: jest expect()"
+  },
+  "jest:expect_to_be": {
+    "prefix": "exb",
+    "body": "expect($1).toBe($2)",
+    "description": "JCustom: jest expect().toBe()"
+  },
+  "jest:expect_to_equal": {
+    "prefix": "exq",
+    "body": "expect($0).toEqual($1)",
+    "description": "JCustom: jest expect().toEqual()"
+  },
+  "jest:before_each": {
+    "prefix": "be",
+    "body": "beforeEach(() => {\n\t$1\n})\n",
+    "description": "JCustom: jest beforeEach"
+  },
+  "jest:after_each": {
+    "prefix": "ae",
+    "body": "afterEach(() => {\n\t$1\n})\n",
+    "description": "JCustom: jest afterEach"
+  },
+  "jest:expect_to_be_callled": {
+    "prefix": "etb",
+    "body": "expect($1).toHaveBeenCalled()",
+    "description": "JCustom: jest to be called"
+  },
+  "jest:expect_to_not_be_callled": {
+    "prefix": "entb",
+    "body": "expect($1).not.toHaveBeenCalled()",
+    "description": "JCustom: jest not to be called"
+  },
+  "jest:expect_to_be_callled_times": {
+    "prefix": "etb",
+    "body": "expect($1).toHaveBeenCalledTimes($2)",
+    "description": "JCustom: jest to be called times"
+  }
+}

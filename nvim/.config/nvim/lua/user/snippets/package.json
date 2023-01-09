@@ -1,0 +1,15 @@
+{
+  "name": "dev99problems_snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [ "javascript", "typescript" ],
+        "path": "./js_testing.json"
+      },
+      {
+        "language": [ "javascript", "typescript" ],
+        "path": "./js.json"
+      }
+    ]
+  }
+}
