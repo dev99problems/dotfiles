@@ -42,6 +42,10 @@ au FocusLost,WinLeave * :silent! w
 " # pseudo-code to enable winbar only for reg buffers and avoid for nvim-tree, terminal, etc.
 " au VimEnter,BufWinEnter * if &buftype == ““ | setlocal winbar=%f | endif
 
+" keeps "virtual scroll" on buffer switch
+autocmd! BufWinLeave * let b:winview = winsaveview()
+autocmd! BufWinEnter * if exists('b:winview') | call winrestview(b:winview) | unlet b:winview
+
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
