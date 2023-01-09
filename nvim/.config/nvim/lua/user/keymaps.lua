@@ -84,7 +84,7 @@ keymap("n", "g_", "$", opts)
 
 -- # Insert --
 -- fast way out
-keymap("i", "jj", "<ESC>", opts)
+keymap("i", "jj", "<C-c>", opts)
 --|||||----------------------------|||||--
 
 
