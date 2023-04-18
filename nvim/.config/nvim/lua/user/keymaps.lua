@@ -130,6 +130,7 @@ keymap("x", "<leader><leader>p", "\"_dP", opts)
 -- ## telescope --
 -- find files using Telescope command-line sugar.
 keymap("n", "<leader>ff", ":Telescope find_files <CR>", opts)
+keymap("n", "<leader>fcc", ":Telescope file_browser path=%:p:h <CR>", opts)
 keymap("n", "<leader>fu", ":Telescope find_files hidden=true <CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
@@ -164,8 +165,10 @@ keymap("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
 keymap("n", "<leader>3", ":BufferLineGoToBuffer 3 <CR>", opts)
 keymap("n", "<leader>4", ":BufferLineGoToBuffer 4 <CR>", opts)
 keymap("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
-keymap("n", "KK", ":BufferLineMoveNext <CR>", opts)
-keymap("n", "JJ", ":BufferLineMovePrev <CR>", opts)
+-- NOTE: these prevents fast switching between tabs and 
+-- should be adjusted
+-- keymap("n", "KK", ":BufferLineMoveNext <CR>", opts)
+-- keymap("n", "JJ", ":BufferLineMovePrev <CR>", opts)
 keymap("n", "<leader>blr", ":BufferLineCloseRight <CR>", opts)
 keymap("n", "<leader>bll", ":BufferLineCloseLeft <CR>", opts)
 
