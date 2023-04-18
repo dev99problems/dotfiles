@@ -72,6 +72,7 @@ alias kgp="k get pods"
 
 ## git
 alias g="git"
+alias gfix="git fix"
 alias gupd="git update"
 alias gupdm="git updm"
 alias gst="git status"
@@ -126,8 +127,8 @@ alias ff_convert="ffmpeg -i $1 -vf scale=1920:1080 -preset slow -crf 18 ./conver
 alias scrpt="more package.json | grep '\"scripts\":' -A 13"
 
 ## npm
-alias run="npm run"
-alias start="npm start"
+alias nrun="npm run"
+alias nstart="npm start"
 
 ## pnpm
 alias prun="pnpm run"
@@ -251,6 +252,3 @@ export PATH="$PNPM_HOME:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
-# bun completions
-[ -s "/Users/$USER/.bun/_bun" ] && source "/Users/$USER/.bun/_bun"
