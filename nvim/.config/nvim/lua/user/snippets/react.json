@@ -1,0 +1,7 @@
+{
+  "react:func": {
+    "prefix": "rfun",
+    "body": "function $1($2) {\n\treturn (\n\t\t$3\n\t)\n}",
+    "description": "JCustom: react functional component"
+  }
+}
