@@ -1,6 +1,4 @@
----------
-MISC
----------
+# MISC
 
 There will be some docs and articles and cool projects refs for `nvim`
 

@@ -1,6 +1,9 @@
 local utils = require('user.utils')
 local bufferline = utils.safe_require('bufferline')
 
+-- NOTE: please do the bufferline switching work in order,
+-- no matter if they were sorted to moved!!!
+
 local get_current_dir = function ()
   -- NOTE: maybe you should pick only 
   -- the last section of path
