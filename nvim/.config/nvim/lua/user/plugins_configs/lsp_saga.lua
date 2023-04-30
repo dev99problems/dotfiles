@@ -1,9 +1,5 @@
-local utils = require('user.utils')
-local saga = utils.safe_require('lspsaga')
-
 local keymap = vim.keymap.set
 local opts = { silent = true }
--- saga.init_lsp_saga()
 
 -- NOTE: consider moving all this to keymaps.lua
 --

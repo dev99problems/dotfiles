@@ -72,6 +72,10 @@ return packer.startup(function(use)
   use({
     'glepnir/lspsaga.nvim',
     branch = 'main',
+    event = 'LspAttach',
+    config = function() 
+      require('lspsaga').setup({})
+    end,
   })
 
   -- NOTE: tried to make this fly, but didn't succeed. For now

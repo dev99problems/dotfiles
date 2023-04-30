@@ -109,6 +109,8 @@ keymap("v", "p", '"_dP', opts)
 -- # Visual Block --
 -- " greatest remap ever, according to ThePrimeagen ;-)
 keymap("x", "<leader><leader>p", "\"_dP", opts)
+
+keymap("x", "<C-p>", "y$%<Enter>p", opts)
 --|||||----------------------------|||||--
 
 -- # Tools --
