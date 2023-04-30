@@ -1,33 +1,87 @@
 # .dotfiles
-The name stands for itself
+My personal dot and "not that dot" files and configs 
 
-## Configuration
+## Configs
+
+This later will be converted into a `auto_setup.sh`, but for now
+saved as a mini-guide.
+
+
+### zshrc
+
+```bash
+# Alias
+ln -s ~/reps/github/.dotfiles/zsh/z.sh ~/.z.sh
+ln -s ~/reps/github/.dotfiles/zsh/.zshrc ~/.zshrc
+```
+
 
 ### kitty
 
 ```bash
-# alias
-~/.z.sh -> .dotfiles/zsh/z.sh
-~/.zshrc -> .dotfiles/zsh/zshrc
+# For some reason linking of kitty stuff doesn't work,
+# so I usually just copy it
+cp ~/reps/github/.dotfiles/kitty/dracula.conf ~/.config/kitty/dracula.conf
+cp ~/reps/github/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ```
 
+
+### nnn
+
 ```bash
-# alias
-~/.config/kitty/dracula.conf -> .dotfiles/kitty/dracula.conf
-~/.config/kitty/kitty.conf =  .dotfiles/kitty/kitty.conf
+# After setting up .zshrc and installing `nnn`, there's a need to add 
+# plugins, so the commited plugins folder can be just aliased
+ln -s ~/reps/github/.dotfiles/nnn/plugins ~/.config/nnn/
 ```
+
 
 ### nvim
 
 ```bash
 # alias
-~/.config/nvim -> .dotfiles/nvim/.config/nvim/
+ln -s ~/reps/github/.dotfiles/nvim/.config/nvim/ ~/.config/nvim
 ```
+
 
 ### tmux
 
 ```bash
+# 1. Firstly you need to copy the config
 # alias
-~/.tmux.conf -> .dotfiles/tmux/.tmux.conf
+ln -s ~/reps/github/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+
+# 2. After that you need to install `tmp` - tmux plugin manager.
+# More details at https://github.com/tmux-plugins/tpm#installation
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# 3. Reload the config and install plugins
+tmux source ~/.tmux.conf
+# Hit <Prefix>I - this will do the magic
+
+# 4. Sometimes after installing tmux using `brew`,
+# I need to adjust the colors for Kitty. More details in `.dotfiles/tmux/`
 ```
 
+
+### git
+
+```bash
+# alias
+ln -s ~/reps/github/.dotfiles/git/.gitconfig ~/.gitconfig
+```
+
+
+### gitextras
+
+```bash
+# alias
+ln -s ~/reps/github/.dotfiles/git_extras ~/.git_extras
+```
+
+
+### gitui
+
+```bash
+# To have nvim keybindings in gitui, connect the config
+ln -s ~/reps/github/.dotfiles/gitui/key_bindings.ron ~/.config/gitui/key_bindings.ron
+```
