@@ -5,8 +5,9 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 # theme
 ZSH_THEME="robbyrussell"
 
-. ~/.z.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
+#. ~/.z.sh
 # zsh plugins
 plugins=(
   git
