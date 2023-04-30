@@ -61,7 +61,7 @@
   draft = commit -m draft-commit --no-verify
   
 [user]
-	name = Eugene Chulkov
+	name = Gene Chulkov
 	email = genechulkov@gmail.com
 [init]
 	defaultBranch = master
