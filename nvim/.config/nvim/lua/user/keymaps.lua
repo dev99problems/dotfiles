@@ -59,6 +59,9 @@ keymap("n", "<C-i>", ":nohlsearch <CR>", opts)
 keymap("n", "SS", ":w <CR>", opts)
 keymap("i", "SS", "<C-c>:w <CR>", opts)
 
+keymap("n", "ii", ":w <CR>", opts)
+keymap("i", "ii", "<C-c>:w <CR>", opts)
+
 -- split and closing it
 keymap("n", "<leader>vs", ":vsplit <CR>", opts)
 keymap("n", "<leader>vc", ":close <CR>", opts)
