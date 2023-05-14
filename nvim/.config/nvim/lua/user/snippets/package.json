@@ -3,15 +3,25 @@
   "contributes": {
     "snippets": [
       {
-        "language": [ "javascript", "typescript", "javascriptreact" ],
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript"
+        ],
         "path": "./js_testing.json"
       },
       {
-        "language": [ "javascript", "typescript", "javascriptreact"  ],
+        "language": [
+          "javascript",
+          "javascriptreact",
+          "typescript"
+        ],
         "path": "./js.json"
       },
       {
-        "language": [ "javascriptreact" ],
+        "language": [
+          "javascriptreact"
+        ],
         "path": "./react.json"
       }
     ]
