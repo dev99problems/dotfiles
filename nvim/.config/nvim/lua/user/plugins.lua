@@ -49,7 +49,7 @@ return packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x', -- this one fixes issue with search_in_buf
     -- tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use { 'nvim-telescope/telescope-file-browser.nvim' }
 
@@ -62,7 +62,7 @@ return packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use {
     'tzachar/cmp-tabnine',
-    run='./install.sh',
+    run = './install.sh',
     requires = 'hrsh7th/nvim-cmp'
   }
 
@@ -73,7 +73,7 @@ return packer.startup(function(use)
     'glepnir/lspsaga.nvim',
     branch = 'main',
     event = 'LspAttach',
-    config = function() 
+    config = function()
       require('lspsaga').setup({})
     end,
   })
@@ -186,6 +186,7 @@ return packer.startup(function(use)
   use 'mhinz/vim-startify'
   use 'ThePrimeagen/vim-be-good'
   use { 'echasnovski/mini.map', branch = 'stable' }
+  use "sbdchd/neoformat"
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
