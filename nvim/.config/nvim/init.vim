@@ -21,6 +21,10 @@ lua require('user.lsp')
 " makes terminal opened in insert mode
 autocmd TermOpen * startinsert
 
+" Neoformat config
+let g:neoformat_try_node_exe = 1
+autocmd BufWritePre *.js Neoformat
+
 " Adds synchronisation between NvimTree and opened file,
 " basically, openes the current file's folder
 " NOTE: this stuff worked cool but together with Telescope,
