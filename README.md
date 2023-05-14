@@ -1,16 +1,15 @@
 # .dotfiles
-My personal dot and "not that dot" files and configs 
+Personal dot and "not that dot" files and configs 
 
 ## Configs
 
-This later will be converted into a `auto_setup.sh`, but for now
-saved as a mini-guide.
-
+This is saved as a reminder.
+The bigger part of this is now done by `setup.sh`.
 
 ### zshrc
 
 ```bash
-# Alias
+# alias
 ln -s ~/reps/github/.dotfiles/zsh/z.sh ~/.z.sh
 ln -s ~/reps/github/.dotfiles/zsh/.zshrc ~/.zshrc
 ```
@@ -19,8 +18,7 @@ ln -s ~/reps/github/.dotfiles/zsh/.zshrc ~/.zshrc
 ### kitty
 
 ```bash
-# For some reason linking of kitty stuff doesn't work,
-# so I usually just copy it
+# alias
 cp ~/reps/github/.dotfiles/kitty/dracula.conf ~/.config/kitty/dracula.conf
 cp ~/reps/github/.dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
 ```
@@ -85,3 +83,6 @@ ln -s ~/reps/github/.dotfiles/git_extras ~/.git_extras
 # To have nvim keybindings in gitui, connect the config
 ln -s ~/reps/github/.dotfiles/gitui/key_bindings.ron ~/.config/gitui/key_bindings.ron
 ```
+
+
+
