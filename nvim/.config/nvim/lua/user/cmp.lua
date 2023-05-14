@@ -14,6 +14,9 @@ require('luasnip.loaders.from_vscode').lazy_load({ paths = '~/.config/nvim/lua/u
 require('luasnip.loaders.from_vscode').lazy_load()
 -- for which lang. and then which snippets
 luasnip.filetype_extend('javascript', {'html'})
+luasnip.filetype_extend('javascriptreact', {'html'})
+luasnip.filetype_extend('typescript', {'html'})
+luasnip.filetype_extend('typescriptreact', {'html'})
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
