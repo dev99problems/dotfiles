@@ -6,8 +6,7 @@
 CURRENT_DIR=$(pwd)
 echo "zsh: linking config & plugins"
 # ln -s ${CURRENT_DIR}/zsh/z.sh ~/.z.sh
-# TODO: rename file
-ln -s ${CURRENT_DIR}/zsh/.zshrc ~/.zshrc 
+ln -s ${CURRENT_DIR}/zsh/zshrc ~/.zshrc 
 
 echo "kitty: linking config & theme"
 ln -s ${CURRENT_DIR}/kitty/dracula.conf ~/.config/kitty/dracula.conf
@@ -17,15 +16,15 @@ echo "nnn: linking plugins"
 ln -s ${CURRENT_DIR}/nnn/plugins ~/.config/nnn/plugins
 
 echo "nvim: linking config"
-ln -s ${CURRENT_DIR}/nvim/.config/nvim ~/.config/nvim
+ln -s ${CURRENT_DIR}/nvim/ ~/.config/nvim
 
 echo "tmux: linking config"
 # TODO: rename file from .tmux.conf to tmux.conf
-ln -s ${CURRENT_DIR}/tmux/.tmux.conf ~/.tmux.conf
+ln -s ${CURRENT_DIR}/tmux/tmux.conf ~/.tmux.conf
 
 echo "git: linking config"
 # TODO: rename file from .gitconfig to gitconfig
-ln -s ${CURRENT_DIR}/git/.gitconfig ~/.gitconfig
+ln -s ${CURRENT_DIR}/git/gitconfig ~/.gitconfig
 
 echo "git-extras: linking config"
 ln -s ${CURRENT_DIR}/git_extras ~/.git_extras
