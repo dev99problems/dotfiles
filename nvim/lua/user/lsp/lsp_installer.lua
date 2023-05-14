@@ -6,9 +6,9 @@ local lsp_handlers = require('user.lsp.handlers')
 lsp_installer.setup({
   ui = {
     icons = {
-       server_installed = "✓",
-       server_pending = "➜",
-       server_uninstalled = "✗"
+      server_installed = "✓",
+      server_pending = "➜",
+      server_uninstalled = "✗"
     }
   }
 })
@@ -18,11 +18,24 @@ local opts = {
   capabilities = lsp_handlers.capabilities,
 }
 
-local sumneko_settings = require('user.lsp.settings.sumneko_lua').settings
-lspconfig.sumneko_lua.setup {
-  attach = opts.on_attach,
-  capabilities = opts.capabilities,
-  settings = sumneko_settings
+-- lua_ls config
+lspconfig.lua_ls.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        globals = {'vim'},
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }
 
 local pyright_settings = require('user.lsp.settings.pyright').settings
