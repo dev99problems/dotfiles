@@ -83,3 +83,10 @@ lspconfig.bashls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
+
+
+local keymap = vim.keymap.set
+local opts = { silent = true }
+
+keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
+keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
