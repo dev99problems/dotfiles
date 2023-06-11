@@ -23,7 +23,7 @@ autocmd TermOpen * startinsert
 
 " Neoformat config
 let g:neoformat_try_node_exe = 1
-autocmd BufWritePre *.js Neoformat
+autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.ts,*.tsx Neoformat
 
 " Adds synchronisation between NvimTree and opened file,
 " basically, openes the current file's folder
