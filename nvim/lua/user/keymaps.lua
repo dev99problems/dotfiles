@@ -97,11 +97,10 @@ keymap("v", "s", "<Nop>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
--- move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+-- better cursor handling after yanking a block
+keymap("v", "y", "ygv<Esc>", opts)
 
--- greatest remap ever, or not 😵
+-- better pasting without spoiling the yank history
 keymap("v", "p", '"_dP', opts)
 --|||||----------------------------|||||--
 
@@ -110,7 +109,6 @@ keymap("v", "p", '"_dP', opts)
 -- " greatest remap ever, according to ThePrimeagen ;-)
 keymap("x", "<leader><leader>p", "\"_dP", opts)
 
-keymap("x", "<C-p>", "y$%<Enter>p", opts)
 --|||||----------------------------|||||--
 
 -- # Tools --
