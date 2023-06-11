@@ -136,6 +136,7 @@ keymap("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
 keymap("n", "<leader>fd", ":Telescope diagnostics <CR>", opts)
 keymap("n", "<leader>fb", ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+keymap("n", "<leader>fd", ":Telescope diagnostics <CR>", opts)
 keymap("n", "<leader>bb", ":Telescope buffers <CR>", opts)
 keymap("n", "<M-e>", ":Telescope oldfiles <CR>", opts)
 keymap("n", "<M-f>", ":Telescope current_buffer_fuzzy_find <CR>", opts)
@@ -172,6 +173,12 @@ keymap("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
 keymap("n", "<leader>blr", ":BufferLineCloseRight <CR>", opts)
 keymap("n", "<leader>bll", ":BufferLineCloseLeft <CR>", opts)
 
+keymap("n", "<S-h>", ":BufferLineCyclePrev <CR>", opts)
+keymap("n", "<S-l>", ":BufferLineCycleNext <CR>", opts)
+
+keymap("n", "<h", ":BufferLineMovePrev <CR>", opts)
+keymap("n", "<l", ":BufferLineMoveNext <CR>", opts)
+
 -- ## nvim-tree
 -- basic toggle of project-tree
 keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
@@ -181,6 +188,17 @@ keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- More available functions:
 -- NvimTreeResize
 -- NvimTreeCollapse
+
+-- ## gitui
+keymap("n", "gui", ":lua require('gitui').open()<CR>", opts)
+
+-- ## fzf
+-- history of commands
+keymap("n", "<C-f>p", ":History<CR>", opts)
+keymap("n", "<C-f>c", ":History:<CR>", opts)
+keymap("n", "<C-f>m", ":Marks<CR>", opts)
+keymap("n", "<C-f>b", ":BCommits<CR>", opts)
+keymap("n", "<C-f>k", ":Maps<CR>", opts)
 
 -- ## startify
 keymap("n", "<M-s>s", ":SSave! <CR>", opts)
