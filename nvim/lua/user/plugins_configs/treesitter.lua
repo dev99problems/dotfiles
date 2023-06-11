@@ -12,7 +12,8 @@ configs.setup {
     'ruby',
     'python',
     'go',
-    'sql'
+    'sql',
+    'markdown'
   },
   -- ensure_installed = 'all',
   sync_install = false,
@@ -22,6 +23,9 @@ configs.setup {
     disable = { '' }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
 
+  },
+  autotag = {
+    enable = true,
   },
   indent = { enable = true, disable = { 'yaml' } },
 }
