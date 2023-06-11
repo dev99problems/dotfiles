@@ -13,10 +13,10 @@ end
 require('luasnip.loaders.from_vscode').lazy_load({ paths = '~/.config/nvim/lua/user/snippets' })
 require('luasnip.loaders.from_vscode').lazy_load()
 -- for which lang. and then which snippets
-luasnip.filetype_extend('javascript', {'html'})
-luasnip.filetype_extend('javascriptreact', {'html'})
-luasnip.filetype_extend('typescript', {'html'})
-luasnip.filetype_extend('typescriptreact', {'html'})
+luasnip.filetype_extend('javascript', { 'html' })
+luasnip.filetype_extend('javascriptreact', { 'html' })
+luasnip.filetype_extend('typescript', { 'html' })
+luasnip.filetype_extend('typescriptreact', { 'html' })
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -119,11 +119,21 @@ cmp.setup {
   },
   sources = {
     -- { name = 'copilot' },
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'cmp_tabnine' },
+    {
+      name = 'nvim_lsp',
+      max_item_count = 3
+    },
+    {
+      name = 'luasnip',
+      max_item_count = 3
+    },
+    { name = 'cmp_tabnine',
+      max_item_count = 3
+    },
+    { name = 'buffer',
+      max_item_count = 5
+    },
     { name = 'path' }, -- keyword_length = <num> can be set for min num. of chars
-    { name = 'buffer' },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
