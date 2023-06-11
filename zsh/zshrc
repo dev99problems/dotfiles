@@ -40,7 +40,8 @@ alias here="ofd"
 alias cph="pwd | pbc" # copy current path to clipboard
 
 alias prev="cd -"
-alias npmg="npm ls -g --depth=0"
+alias npg="npm ls -g --depth=0"
+alias png="pnpm ls -g"
 alias pn="pnpm"
 alias hosts="cat /etc/hosts"
 alias findpid="sudo lsof -i -P | grep"
@@ -73,6 +74,7 @@ alias kgp="k get pods"
 
 ## git
 alias g="git"
+alias gaa="git add ."
 alias gfix="git fix"
 alias gupd="git update"
 alias gupdm="git updm"
@@ -89,6 +91,7 @@ alias gn="git new"
 alias gr="git rename"
 alias grel="git reset ."
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
+alias gch='git recent | fzf --height=20% --info=inline | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
 alias gdu='git add -N . && git diff'
 alias gsta='git add . && git stash'
