@@ -77,6 +77,15 @@ return packer.startup(function(use)
       require('lspsaga').setup({})
     end,
   })
+  use({
+    'zbirenbaum/neodim',
+    event = 'LspAttach',
+    branch = 'v2',
+  })
+  use({
+    'fatih/vim-go',
+    run = ':GoUpdateBinaries'
+  })
 
   -- NOTE: tried to make this fly, but didn't succeed. For now
   -- use {
@@ -97,11 +106,18 @@ return packer.startup(function(use)
 
   use {
     'windwp/nvim-autopairs',
-    config = function() require('nvim-autopairs').setup {} end
+    config = function()
+      require('nvim-autopairs').setup {}
+    end
   }
   use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
-
+  use {
+    'aspeddro/gitui.nvim',
+    config = function()
+      require('gitui').setup()
+    end
+  }
   -- fzf
   use { 'junegunn/fzf', run = ':call fzf#install()' }
   use { 'junegunn/fzf.vim' }
@@ -112,6 +128,7 @@ return packer.startup(function(use)
     run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-context'
+  use 'windwp/nvim-ts-autotag'
 
   -- power lines
   use {
