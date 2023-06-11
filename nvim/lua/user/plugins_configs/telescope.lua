@@ -2,8 +2,7 @@ local utils = require('user.utils')
 local telescope = utils.safe_require('telescope')
 local actions = utils.safe_require('telescope.actions')
 
-telescope.load_extension 'file_browser'
-telescope.load_extension 'neoclip'
+local fb_actions = telescope.extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
@@ -85,6 +84,11 @@ telescope.setup {
     },
   },
   pickers = {
+    diagnostics = {
+      layout_config = {
+        preview_width = 0.4
+      },
+    }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
@@ -94,6 +98,19 @@ telescope.setup {
     -- builtin picker
   },
   extensions = {
+    file_browser = {
+      layout_config = {
+        preview_width = 0.4
+      },
+      mappings = {
+        ['i'] = {
+          ['<C-->'] = fb_actions.goto_parent_dir,
+        },
+        ['n'] = {
+          ['-'] = fb_actions.goto_parent_dir,
+        }
+      }
+    }
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
@@ -101,3 +118,7 @@ telescope.setup {
     -- please take a look at the readme of the extension you want to configure
   },
 }
+
+
+telescope.load_extension 'file_browser'
+telescope.load_extension 'neoclip'
