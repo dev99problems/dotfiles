@@ -23,10 +23,6 @@ keymap("n", "<C-J>", "<C-W>j", opts)
 keymap("n", "<C-K>", "<C-W>k", opts)
 keymap("n", "<C-L>", "<C-W>l", opts)
 
--- navigate buffers
-keymap("n", "<S-l>", ":bnext <CR>", opts)
-keymap("n", "<S-h>", ":bprevious <CR>", opts)
-
 -- resize with arrows
 keymap("n", "<S-Up>", ":resize +4<CR>", opts)
 keymap("n", "<S-Down>", ":resize -4<CR>", opts)
@@ -59,9 +55,6 @@ keymap("n", "<C-i>", ":nohlsearch <CR>", opts)
 keymap("n", "SS", ":w <CR>", opts)
 keymap("i", "SS", "<C-c>:w <CR>", opts)
 
-keymap("n", "ii", ":w <CR>", opts)
-keymap("i", "ii", "<C-c>:w <CR>", opts)
-
 -- split and closing it
 keymap("n", "<leader>vs", ":vsplit <CR>", opts)
 keymap("n", "<leader>vc", ":close <CR>", opts)
@@ -82,6 +75,10 @@ keymap("n", "0", "^", opts)
 keymap("n", "$", "g_", opts)
 keymap("n", "^", "0", opts)
 keymap("n", "g_", "$", opts)
+
+-- move text up and down
+keymap("n", "˚", ":m .-2<CR>==", opts)
+keymap("n", "∆", ":m .+1<CR>==", opts)
 --|||||----------------------------|||||--
 
 
