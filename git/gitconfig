@@ -52,6 +52,7 @@
   prev = !git cho -
   fix = commit --amend --no-edit
   sign = !git com -m
+  temp = !git sign temp
   new = !git cho -b
   update = !git fe  && echo "------- updating from: master -------" && git rebase origin/master 
   upd = !git update
