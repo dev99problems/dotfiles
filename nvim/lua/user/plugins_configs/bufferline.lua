@@ -45,7 +45,7 @@ bufferline.setup {
     -- show_close_icon = true | false,
     -- show_tab_indicators = true | false,
     -- show_duplicate_prefix = true | false, -- whether to show duplicate buffer prefix
-    -- persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
+    persist_buffer_sort = false, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
     separator_style = 'slant',
