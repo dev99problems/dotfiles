@@ -169,11 +169,12 @@ return packer.startup(function(use)
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
   -- yank history
+  use { "kkharji/sqlite.lua" }
   use {
     'AckslD/nvim-neoclip.lua',
     requires = {
       { 'nvim-telescope/telescope.nvim' }
-    }
+    },
   }
 
   -- trouble
