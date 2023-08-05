@@ -23,33 +23,39 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s'
 end
 
---   פּ ﯟ   some other good icons
+vim.api.nvim_set_hl(0, "CmpItemKindTabNine", {fg ="#6CC644"})
+
+-- all the icons examples can be checked:
+-- 1. https://www.nerdfonts.com/cheat-sheet
+-- 2. https://microsoft.github.io/vscode-codicons/dist/codicon.html 
+-- 3. https://pictogrammers.com/library/mdi/
 local kind_icons = {
-  Text = '',
-  Method = 'm',
-  Function = '',
+  Text = '',
+  Method = '',
+  Function = '󰊕',
   Constructor = '',
   Field = '',
-  Variable = '',
-  Class = '',
+  Parameter = '',
+  Variable = '',
+  Class = '',
   Interface = '',
   Module = '',
   Property = '',
   Unit = '',
-  Value = '',
+  Value = '',
   Enum = '',
   Keyword = '',
   Snippet = '',
-  Color = '',
-  File = '',
+  Color = '󰏘',
+  File = '',
   Reference = '',
-  Folder = '',
+  Folder = '',
   EnumMember = '',
-  Constant = '',
+  Constant = '',
   Struct = '',
   Event = '',
-  Operator = '',
-  TypeParameter = '',
+  Operator = '',
+  TypeParameter = '',
 }
 
 cmp.setup {
