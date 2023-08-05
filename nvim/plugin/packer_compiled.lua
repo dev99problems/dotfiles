@@ -167,11 +167,11 @@ _G.packer_plugins = {
   },
   ["lspsaga.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0" },
-    loaded = false,
+    load_after = {},
+    loaded = true,
     needs_bufread = false,
-    only_cond = false,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
+    url = "https://github.com/nvimdev/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -187,13 +187,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/mini.map",
     url = "https://github.com/echasnovski/mini.map"
-  },
-  neodim = {
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/gene/.local/share/nvim/site/pack/packer/opt/neodim",
-    url = "https://github.com/zbirenbaum/neodim"
   },
   neoformat = {
     loaded = true,
@@ -264,7 +257,7 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   onehalf = {
     loaded = true,
@@ -300,6 +293,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/solarized.nvim",
     url = "https://github.com/shaunsingh/solarized.nvim"
+  },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/sqlite.lua",
+    url = "https://github.com/kkharji/sqlite.lua"
   },
   ["telescope-file-browser.nvim"] = {
     loaded = true,
@@ -363,21 +361,23 @@ time([[Defining packer_plugins]], false)
 time([[Runtimepath customization]], true)
 vim.o.runtimepath = vim.o.runtimepath .. ",/Users/gene/.local/share/nvim/site/pack/packer/start/onehalf/vim"
 time([[Runtimepath customization]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: gitui.nvim
 time([[Config for gitui.nvim]], true)
 try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ngitui\frequire\0", "config", "gitui.nvim")
 time([[Config for gitui.nvim]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Event lazy-loads
-time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au LspAttach * ++once lua require("packer.load")({'neodim', 'lspsaga.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
-time([[Defining lazy-load event autocommands]], false)
-vim.cmd("augroup END")
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-lspconfig ]]
+vim.cmd [[ packadd lspsaga.nvim ]]
+
+-- Config for: lspsaga.nvim
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
+
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
