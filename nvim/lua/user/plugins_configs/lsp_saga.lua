@@ -8,7 +8,7 @@ local opts = { silent = true }
 -- when you use action in finder like open vsplit then you can
 -- use <C-t> to jump back
 -- keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", opts)
-keymap("n", "sf", "<cmd>Lspsaga lsp_finder<CR>", opts)
+keymap("n", "sf", "<cmd>Lspsaga finder<CR>", opts)
 
 -- Code action
 keymap({"n","v"}, "sca", "<cmd>Lspsaga code_action<CR>", opts)
@@ -31,6 +31,7 @@ keymap("n", "sgd", "<cmd>Lspsaga peek_definition<CR>", opts)
 -- Diagnostic jump can use `<c-o>` to jump back
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
+keymap("n", "]a", "<cmd>Lspsaga show_buf_diagnostics<CR>", opts)
 
 -- Only jump to error
 keymap("n", "[E", function()

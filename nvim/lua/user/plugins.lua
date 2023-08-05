@@ -69,13 +69,16 @@ return packer.startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-  use({
-    'glepnir/lspsaga.nvim',
-    branch = 'main',
-    event = 'LspAttach',
+  use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
     config = function()
-      require('lspsaga').setup({})
+        require('lspsaga').setup({})
     end,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter'; -- optional
+      'nvim-tree/nvim-web-devicons';     -- optional
+    }
   })
   use({
     'zbirenbaum/neodim',
