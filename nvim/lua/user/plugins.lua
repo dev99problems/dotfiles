@@ -81,11 +81,6 @@ return packer.startup(function(use)
     }
   })
   use({
-    'zbirenbaum/neodim',
-    event = 'LspAttach',
-    branch = 'v2',
-  })
-  use({
     'fatih/vim-go',
     run = ':GoUpdateBinaries'
   })
