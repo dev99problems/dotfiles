@@ -128,25 +128,26 @@ return packer.startup(function(use)
   use 'nvim-treesitter/nvim-treesitter-context'
   use 'windwp/nvim-ts-autotag'
 
+  -- icons
+  use 'ryanoasis/vim-devicons'
+  use 'nvim-tree/nvim-web-devicons'
+
   -- power lines
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use {
     'akinsho/bufferline.nvim',
-    tag = 'v2.*',
-    requires = 'kyazdani42/nvim-web-devicons'
+    tag = '*',
+    requires = 'nvim-tree/nvim-web-devicons'
   }
-  -- icons
-  use 'ryanoasis/vim-devicons'
-  use 'kyazdani42/nvim-web-devicons'
 
   -- file trees
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons'
+      'nvim-tree/nvim-web-devicons'
     }
   }
 
@@ -178,7 +179,7 @@ return packer.startup(function(use)
   -- trouble
   use {
     'folke/trouble.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 
   -- themes
