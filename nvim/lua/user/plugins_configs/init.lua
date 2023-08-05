@@ -1,7 +1,7 @@
-require('user.plugins_configs.telescope')
 require('user.plugins_configs.bufferline')
 require('user.plugins_configs.misc')
 require('user.plugins_configs.treesitter')
+require('user.plugins_configs.neoclip')
 -- temporarily swithced neoscroll off
 -- require('user.plugins_configs.neoscroll')
 require('user.plugins_configs.nvim_tree')
@@ -14,6 +14,8 @@ require('user.plugins_configs.startify')
 require('user.plugins_configs.gitsigns')
 require('user.plugins_configs.minimap')
 require('user.plugins_configs.lsp_saga')
+require('user.plugins_configs.telescope')
 -- require('user.plugins_configs.solar_client')
 -- winbar requires NeoVim nightly, aka 0.9.x
 -- require('user.plugins.winbar')
+
