@@ -21,7 +21,7 @@
   # tips from Harry Roberts
   # https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/
   stats = !git shortlog -sn --all --no-merges
-  recent = !git for-each-ref --count=5 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+  recent = !git for-each-ref --count=8 --sort=-committerdate refs/heads/ --format='%(refname:short)'
 
   # tips from Rob Miller
   # https://gist.github.com/robmiller/6018582
