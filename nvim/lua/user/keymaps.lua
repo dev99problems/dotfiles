@@ -130,11 +130,10 @@ keymap("x", "<leader><leader>p", "\"_dP", opts)
 -- ## telescope --
 -- find files using Telescope command-line sugar.
 keymap("n", "<leader>ff", ":Telescope find_files <CR>", opts)
-keymap("n", "<leader>fcc", ":Telescope file_browser path=%:p:h <CR>", opts)
+keymap("n", "<leader>fc", ":Telescope file_browser path=%:p:h <CR>", opts)
 keymap("n", "<leader>fu", ":Telescope find_files hidden=true <CR>", opts)
 keymap("n", "<leader>fg", ":Telescope live_grep <CR>", opts)
 keymap("n", "<leader>fh", ":Telescope help_tags <CR>", opts)
-keymap("n", "<leader>fd", ":Telescope diagnostics <CR>", opts)
 keymap("n", "<leader>fb", ":lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 keymap("n", "<leader>fd", ":Telescope diagnostics <CR>", opts)
 keymap("n", "<leader>bb", ":Telescope buffers <CR>", opts)
@@ -151,7 +150,7 @@ keymap("n", "<leader>rr", ":Telescope registers <CR>", opts)
 -- yank history
 keymap("n", "<leader>ne", ":Telescope neoclip <CR>", opts)
 -- commands
-keymap("n", "<leader>fch", ":Telescope commands_history <CR>", opts)
+-- keymap("n", "<leader>fch", ":Telescope commands_history <CR>", opts)
 
 -- ## floaterm
 keymap("n", "<M-y>", ":FloatermToggle <CR>", opts)
