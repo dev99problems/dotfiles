@@ -149,6 +149,8 @@ keymap("n", "<leader>lws", ":Telescope lsp_workspace_symbols <CR>", opts)
 keymap("n", "<leader>rr", ":Telescope registers <CR>", opts)
 -- yank history
 keymap("n", "<leader>ne", ":Telescope neoclip <CR>", opts)
+-- bookmarks
+keymap("n", "gma", ":Telescope quickfix <CR>", opts)
 -- commands
 -- keymap("n", "<leader>fch", ":Telescope commands_history <CR>", opts)
 
