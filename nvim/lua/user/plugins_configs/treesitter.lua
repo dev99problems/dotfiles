@@ -3,6 +3,8 @@ local configs = utils.safe_require('nvim-treesitter.configs')
 
 configs.setup {
   ensure_installed = {
+    'terraform',
+    'lua',
     'html',
     'javascript',
     'typescript',
