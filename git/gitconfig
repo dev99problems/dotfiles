@@ -42,6 +42,8 @@
   cho = checkout
   hi = !git hist | head 
   hist = log --graph --color --pretty=format:'%Cred%ad%Creset %C(yellow)%h%Creset | %s%d %C(bold blue)[%an]' --date=short
+  hir = !git histr | head 
+  histr = log --graph --color --pretty=format:'%Cred%<(13)%ar%Creset %C(yellow)%h%Creset | %s%d %C(bold blue)[%an]'
   filez = diff-tree --no-commit-id --name-only -r @
   last = !git hist | head -n 1 
   relast = reset @^
