@@ -52,8 +52,8 @@ keymap("n", "<leader><leader>r", ":reg <CR>", opts)
 keymap("n", "<C-i>", ":nohlsearch <CR>", opts)
 
 -- save file
-keymap("n", "SS", ":w <CR>", opts)
-keymap("i", "SS", "<C-c>:w <CR>", opts)
+keymap("n", "SS", ":w! <CR>", opts)
+keymap("i", "SS", "<C-c>:w! <CR>", opts)
 
 -- split and closing it
 keymap("n", "<leader>vs", ":vsplit <CR>", opts)
