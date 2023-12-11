@@ -1,7 +1,12 @@
 {
-  "console_log": {
+  "general:cconsole_log": {
     "prefix": "cll",
     "body": "console.log(`$1 = ${$1}`)",
-    "description": "JCustom: console.log() with arg"
+    "description": "JCustom: console.log(`arg = ${arg}`) with arg"
+  },
+  "general:console_log": {
+    "prefix": "cl",
+    "body": "console.log($1)",
+    "description": "JCustom: console.log()"
   }
 }

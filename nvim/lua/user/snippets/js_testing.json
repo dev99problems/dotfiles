@@ -1,4 +1,14 @@
 {
+  "describe:it": {
+    "prefix": "desc",
+    "body": "describe('$1', () => {\n$2})",
+    "description": "JCustom: testing describe()"
+  },
+  "test:it": {
+    "prefix": "it",
+    "body": "it('$1', () => {\n$2})",
+    "description": "JCustom: testing it()"
+  },
   "jest:expect": {
     "prefix": "ex",
     "body": "expect($0)",
