@@ -197,7 +197,7 @@ function n {
     # # # stty lnext undef
     # #
     # # nnn "$@"
-     TMUX='' tmux new-session nnn $@
+    TMUX='' tmux new-session nnn $@
 
     if [ -f "$NNN_TMPFILE" ]; then
             . "$NNN_TMPFILE"
