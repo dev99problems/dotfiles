@@ -163,6 +163,8 @@ return packer.startup(function(use)
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
+  use 'tpope/vim-unimpaired'
+
 
   -- scroll
   use 'karb94/neoscroll.nvim'
@@ -177,6 +179,11 @@ return packer.startup(function(use)
     requires = {
       { 'nvim-telescope/telescope.nvim' }
     },
+  }
+
+  -- bookmarks
+  use {
+    'MattesGroeger/vim-bookmarks'
   }
 
   -- trouble
