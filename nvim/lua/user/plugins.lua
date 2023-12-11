@@ -107,7 +107,15 @@ return packer.startup(function(use)
   use {
     'aspeddro/gitui.nvim',
     config = function()
-      require('gitui').setup()
+      require('gitui').setup({
+        window = {
+          options = {
+            width = 95,
+            height = 100,
+            border = 'rounded'
+          }
+        }
+      })
     end
   }
   -- fzf
