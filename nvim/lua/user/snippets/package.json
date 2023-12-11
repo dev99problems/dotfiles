@@ -6,7 +6,8 @@
         "language": [
           "javascript",
           "javascriptreact",
-          "typescript"
+          "typescript",
+          "typescriptreact"
         ],
         "path": "./js_testing.json"
       },
@@ -14,13 +15,15 @@
         "language": [
           "javascript",
           "javascriptreact",
-          "typescript"
+          "typescript",
+          "typescriptreact"
         ],
         "path": "./js.json"
       },
       {
         "language": [
-          "javascriptreact"
+          "javascriptreact",
+          "typescriptreact"
         ],
         "path": "./react.json"
       }
