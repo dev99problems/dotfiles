@@ -208,7 +208,8 @@ return packer.startup(function(use)
   use 'sainnhe/everforest'
 
   -- misc
-  use 'lukas-reineke/indent-blankline.nvim' -- this one is so good!
+  use { 'lukas-reineke/indent-blankline.nvim' }
+  -- use 'lukas-reineke/indent-blankline.nvim' -- this one is so good!
   use 'mhinz/vim-startify'
   use 'ThePrimeagen/vim-be-good'
   use { 'echasnovski/mini.map', branch = 'stable' }
