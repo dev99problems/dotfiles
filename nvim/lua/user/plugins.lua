@@ -80,22 +80,16 @@ return packer.startup(function(use)
       'nvim-tree/nvim-web-devicons';     -- optional
     }
   })
+
   use({
     'fatih/vim-go',
     run = ':GoUpdateBinaries'
   })
 
-  -- NOTE: tried to make this fly, but didn't succeed. For now
-  -- use {
-  --   'autozimu/LanguageClient-neovim',
-  --   branch = 'next',
-  --   run = 'bash install.sh'
-  -- }
-
   -- snippets
   use {
     'L3MON4D3/LuaSnip',
-    tag = 'v1.1.0'
+    tag = 'v2.0.0'
   }
   use 'rafamadriz/friendly-snippets'
   -- use 'MarcWeber/vim-addon-mw-utils'
