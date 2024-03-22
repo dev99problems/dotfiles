@@ -250,6 +250,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 ## rbenv
 eval "$(rbenv init - zsh)"
 
+## ruby | minitest
+export MINITEST_REPORTER="SpecReporter"
+
 # pnpm
 export PNPM_HOME="/Users/$USER/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
