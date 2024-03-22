@@ -38,6 +38,7 @@ lspconfig.lua_ls.setup {
   },
 }
 
+-- python
 local pyright_settings = require('user.lsp.settings.pyright').settings
 lspconfig.pyright.setup {
   attach = opts.on_attach,
