@@ -1,12 +1,67 @@
 {
-  "general:cconsole_log": {
+  "general:console_log_with_params": {
     "prefix": "cll",
     "body": "console.log(`$1 = ${$1}`)",
-    "description": "JCustom: console.log(`arg = ${arg}`) with arg"
+    "description": "j: console.log(`arg = ${arg}`)"
   },
   "general:console_log": {
     "prefix": "cl",
     "body": "console.log($1)",
-    "description": "JCustom: console.log()"
+    "description": "j: console.log()"
+  },
+  "es:import": {
+    "prefix": "im",
+    "body": "import {$2} from '$1'",
+    "description": "j: default import"
+  },
+  "es:import_local": {
+    "prefix": "iml",
+    "body": "import {$2} from './$1'",
+    "description": "j: import from local"
+  },
+  "es:import_type": {
+    "prefix": "imt",
+    "body": "import type {$2} from '$1'",
+    "description": "j: import type"
+  },
+  "es:import_local_type": {
+    "prefix": "imlt",
+    "body": "import type {$2} from './$1'",
+    "description": "j: import type from local"
+  },
+  "es:export": {
+    "prefix": "exp",
+    "body": "export { $1 }",
+    "description": "j: default export"
+  },
+  "es:export_local": {
+    "prefix": "expl",
+    "body": "export { $2 } from './$1'",
+    "description": "j: export from local"
+  },
+  "es:export_local_type": {
+    "prefix": "explt",
+    "body": "export type { $2 } from './$1'",
+    "description": "j: export type from local"
+  },
+  "es:extract_local": {
+    "prefix": "conex",
+    "body": "const { $2 } = $1",
+    "description": "j: extract local"
+  },
+  "es:function_arrow": {
+    "prefix": "fna",
+    "body": "const ${1:name} = (${2:arguments}) => {\n  $3\n}",
+    "description": "j: extract local"
+  },
+  "node:import": {
+    "prefix": "nim",
+    "body": "const {$2} = require('$1')",
+    "description": "j: node default import"
+  },
+  "node:export": {
+    "prefix": "nexp",
+    "body": "module.exports = {\n  $1\n}",
+    "description": "j: node default export"
   }
 }

@@ -1,7 +1,12 @@
 {
-  "react:func": {
-    "prefix": "rfun",
+  "jsx:cmp_func": {
+    "prefix": "cmpf",
     "body": "function $1($2) {\n\treturn (\n\t\t$3\n\t)\n}",
-    "description": "JCustom: react functional component"
+    "description": "j: jsx component via function"
+  },
+  "jsx:cmp_arr": {
+    "prefix": "cmp",
+    "body": "const $1 = ({ $2 }) {\n  return(\n    $3\n  )\n}",
+    "description": "j: jsx component via arrow function"
   }
 }

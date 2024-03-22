@@ -7,46 +7,61 @@
   "test:it": {
     "prefix": "it",
     "body": "it('$1', () => {\n$2})",
-    "description": "JCustom: testing it()"
+    "description": "j: testing it()"
   },
   "jest:expect": {
-    "prefix": "ex",
+    "prefix": "ext",
     "body": "expect($0)",
-    "description": "JCustom: jest expect()"
+    "description": "j: jest expect()"
+  },
+  "desc:it:expect": {
+    "prefix": "desc_it_ext",
+    "body": "describe('$1', () => {\n  it('should', () => {\n    expect(true).toBe(true)\n  })\n})",
+    "description": "j: jest describe->it->expect"
   },
   "jest:expect_to_be": {
-    "prefix": "exb",
+    "prefix": "extb",
     "body": "expect($1).toBe($2)",
-    "description": "JCustom: jest expect().toBe()"
+    "description": "j: jest expect().toBe()"
   },
   "jest:expect_to_equal": {
-    "prefix": "exq",
-    "body": "expect($0).toEqual($1)",
-    "description": "JCustom: jest expect().toEqual()"
+    "prefix": "extq",
+    "body": "expect($1).toEqual($2)",
+    "description": "j: jest expect().toEqual()"
   },
   "jest:before_each": {
     "prefix": "be",
     "body": "beforeEach(() => {\n\t$1\n})\n",
-    "description": "JCustom: jest beforeEach"
+    "description": "j: jest beforeEach"
   },
   "jest:after_each": {
     "prefix": "ae",
     "body": "afterEach(() => {\n\t$1\n})\n",
-    "description": "JCustom: jest afterEach"
+    "description": "j: jest afterEach"
+  },
+  "jest:before_all": {
+    "prefix": "ba",
+    "body": "beforeAll(() => {\n\t$1\n})\n",
+    "description": "j: jest beforeAll"
+  },
+  "jest:after_all": {
+    "prefix": "aa",
+    "body": "afterAll(() => {\n\t$1\n})\n",
+    "description": "j: jest afterAll"
   },
   "jest:expect_to_be_callled": {
-    "prefix": "etb",
+    "prefix": "extb",
     "body": "expect($1).toHaveBeenCalled()",
-    "description": "JCustom: jest to be called"
+    "description": "j: jest to be called"
   },
   "jest:expect_to_not_be_callled": {
-    "prefix": "entb",
+    "prefix": "exttnb",
     "body": "expect($1).not.toHaveBeenCalled()",
-    "description": "JCustom: jest not to be called"
+    "description": "j: jest not to be called"
   },
   "jest:expect_to_be_callled_times": {
-    "prefix": "etb",
+    "prefix": "extb",
     "body": "expect($1).toHaveBeenCalledTimes($2)",
-    "description": "JCustom: jest to be called times"
+    "description": "j: jest to be called times"
   }
 }
