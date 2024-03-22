@@ -27,6 +27,6 @@ lualine.setup {
     },
     lualine_x = {},
     lualine_y = {'progress'},
-    lualine_z = {'branch', 'diff', 'diagnostics'}
+    lualine_z = {'diff', 'diagnostics'}
   },
 }
