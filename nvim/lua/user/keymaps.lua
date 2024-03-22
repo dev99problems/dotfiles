@@ -160,25 +160,32 @@ keymap("t", "<M-y>", "<C-\\><C-n>:FloatermToggle <CR>", opts)
 -- keymap("n", "<M-t>", ":FloatermToggle <CR>", opts)
 -- keymap("t", "<M-t>", "<C-\\><C-n>:FloatermToggle <CR>", opts)
 
--- ## bufferline
+-- ## Bufferline
 -- switching between buffers
 keymap("n", "<leader>1", ":BufferLineGoToBuffer 1 <CR>", opts)
 keymap("n", "<leader>2", ":BufferLineGoToBuffer 2 <CR>", opts)
 keymap("n", "<leader>3", ":BufferLineGoToBuffer 3 <CR>", opts)
 keymap("n", "<leader>4", ":BufferLineGoToBuffer 4 <CR>", opts)
 keymap("n", "<leader>5", ":BufferLineGoToBuffer 5 <CR>", opts)
--- NOTE: these prevents fast switching between tabs and 
--- should be adjusted
--- keymap("n", "KK", ":BufferLineMoveNext <CR>", opts)
--- keymap("n", "JJ", ":BufferLineMovePrev <CR>", opts)
+
+-- close all tabs right & left from current one
 keymap("n", "<leader>blr", ":BufferLineCloseRight <CR>", opts)
 keymap("n", "<leader>bll", ":BufferLineCloseLeft <CR>", opts)
+keymap("n", "<leader>blo", ":BufferLineCloseOthers <CR>", opts)
 
+-- move left & right through buffers
 keymap("n", "<S-h>", ":BufferLineCyclePrev <CR>", opts)
 keymap("n", "<S-l>", ":BufferLineCycleNext <CR>", opts)
 
+-- move
 keymap("n", "<h", ":BufferLineMovePrev <CR>", opts)
 keymap("n", "<l", ":BufferLineMoveNext <CR>", opts)
+
+-- pin
+keymap("n", "<leader>bp", ":BufferLineTogglePin <CR>", opts)
+
+-- pick
+keymap("n", "<leader>bs", ":BufferLinePick <CR>", opts)
 
 -- ## nvim-tree
 -- basic toggle of project-tree
