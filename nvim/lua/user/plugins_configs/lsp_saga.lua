@@ -16,11 +16,16 @@ keymap({"n","v"}, "sca", "<cmd>Lspsaga code_action<CR>", opts)
 -- Rename
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
 
+-- Definition
+keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+
 -- Peek Definition
 -- you can edit the definition file in this flaotwindow
 -- also support open/vsplit/etc operation check definition_action_keys
 -- support tagstack C-t jump back
 keymap("n", "sgd", "<cmd>Lspsaga peek_definition<CR>", opts)
+
+keymap("n", "sgt", "<cmd>Lspsaga peek_type_definition<CR>", opts)
 
 -- Show line diagnostics
 -- keymap("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
