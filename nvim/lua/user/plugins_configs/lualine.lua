@@ -4,7 +4,7 @@ local lualine = utils.safe_require('lualine')
 lualine.setup {
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'location'},
+    lualine_b = {'filesize'},
     lualine_c = {
       {
         'filename',
@@ -25,7 +25,7 @@ lualine.setup {
         }
       },
     },
-    lualine_x = {},
+    lualine_x = {'location'},
     lualine_y = {'progress'},
     lualine_z = {'diff', 'diagnostics'}
   },
