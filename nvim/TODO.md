@@ -1,11 +1,11 @@
 # Current plans
 
 ## TODO:
-`[ ]` configure `bufferline`
-`[ ]` configure [lualine](https://github.com/nvim-lualine/lualine.nvim)
 `[ ]` add some custom `Telescope` keymaps `https://www.youtube.com/watch?v=Ua8FkgTL-94`
 
 ## DONE:
+`[X]` configure [lualine](https://github.com/nvim-lualine/lualine.nvim)
+`[X]` configure `bufferline`
 `[X]` configure `luasnip`
 `[X]` configure `keymaps` for `neoclip`
 `[X]` migrate to `gitsigns` from `gitgugger` (https://github.com/lewis6991/gitsigns.nvim)
