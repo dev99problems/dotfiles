@@ -221,6 +221,16 @@ export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
 ## stands for go to mode
 export FZF_ALT_C_COMMAND="fd --type d  $FD_OPTIONS"
 
+# NOTE: fzf theme generator 
+# https://vitormv.github.io/fzf-themes/
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#d0d0d0,fg+:#d0d0d0,bg:#352323,bg+:#133daf
+  --color=hl:#5f87af,hl+:#5fd7ff,info:#afaf87,marker:#62b505
+  --color=prompt:#00acea,spinner:#af5fff,pointer:#19fb19,header:#87afaf
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="->" --separator="─" --scrollbar="│"'
+
 ## sessions configs EXAMPLE
 alias liroo="ssh -i ~/.ssh/<ssh_key> <user>@<ip>"
 
