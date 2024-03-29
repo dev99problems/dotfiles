@@ -187,6 +187,9 @@ keymap("n", "<leader>bp", ":BufferLineTogglePin <CR>", opts)
 -- pick
 keymap("n", "<leader>bs", ":BufferLinePick <CR>", opts)
 
+-- sort by dir
+keymap("n", "<leader>bst", ":BufferLineSortByDirectory <CR>", opts)
+
 -- ## nvim-tree
 -- basic toggle of project-tree
 keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
