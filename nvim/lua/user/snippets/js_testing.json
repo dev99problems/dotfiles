@@ -5,8 +5,8 @@
     "description": "JCustom: testing describe()"
   },
   "test:it": {
-    "prefix": "it",
-    "body": "it('$1', () => {\n$2})",
+    "prefix": "it_expt",
+    "body": "it('should $1', () => {\n  expect(${2:value}).toBe(${3:expected})\n})",
     "description": "j: testing it()"
   },
   "jest:expect": {
@@ -15,7 +15,7 @@
     "description": "j: jest expect()"
   },
   "desc:it:expect": {
-    "prefix": "desc_it_ext",
+    "prefix": "desc_it_expt",
     "body": "describe('$1', () => {\n  it('should', () => {\n    expect(true).toBe(true)\n  })\n})",
     "description": "j: jest describe->it->expect"
   },
