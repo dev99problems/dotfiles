@@ -30,17 +30,17 @@
     "description": "j: import type from local"
   },
   "es:export": {
-    "prefix": "exp",
+    "prefix": "eexp",
     "body": "export { $1 }",
     "description": "j: default export"
   },
   "es:export_local": {
-    "prefix": "expl",
+    "prefix": "eexpl",
     "body": "export { $2 } from './$1'",
     "description": "j: export from local"
   },
   "es:export_local_type": {
-    "prefix": "explt",
+    "prefix": "eexplt",
     "body": "export type { $2 } from './$1'",
     "description": "j: export type from local"
   },
