@@ -6,7 +6,7 @@
   },
   "jsx:cmp_arr": {
     "prefix": "cmp",
-    "body": "const $1 = ({ $2 }) {\n  return(\n    $3\n  )\n}",
+    "body": "const $1 = ({ $2 }) => {\n  return(\n    $3\n  )\n}",
     "description": "j: jsx component via arrow function"
   }
 }
