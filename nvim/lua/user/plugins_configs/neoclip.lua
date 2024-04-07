@@ -7,9 +7,10 @@ neoclip.setup({
   keys = {
     telescope = {
       i = {
-        select = '<c-p>',
-        paste = '<cr>',
-        paste_behind = '<c-b>', -- for some reason this — doesn't work
+        select = '<cr>',
+        -- paste = '<c-p>',
+        paste_behind = '<c-i>',
+        edit = '<c-e>', -- edit an entry
         delete = '<c-d>',  -- delete an entry
       }
     },
