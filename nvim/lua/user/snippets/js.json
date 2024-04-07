@@ -9,6 +9,11 @@
     "body": "console.log($1)",
     "description": "j: console.log()"
   },
+  "general:console_log_delimeter": {
+    "prefix": "cld",
+    "body": "console.log('--------------------------')",
+    "description": "j: console.log() delimiter line"
+  },
   "es:import": {
     "prefix": "im",
     "body": "import {$2} from '$1'",
@@ -32,16 +37,21 @@
   "es:export": {
     "prefix": "eexp",
     "body": "export { $1 }",
-    "description": "j: default export"
+    "description": "j: simple named export"
+  },
+  "es:export_type": {
+    "prefix": "eexpt",
+    "body": "export type { $1 }",
+    "description": "j: export type from local"
   },
   "es:export_local": {
     "prefix": "eexpl",
-    "body": "export { $2 } from './$1'",
+    "body": "export { $2 } from '$1'",
     "description": "j: export from local"
   },
   "es:export_local_type": {
-    "prefix": "eexplt",
-    "body": "export type { $2 } from './$1'",
+    "prefix": "eexpl",
+    "body": "export type { $2 } from '$1'",
     "description": "j: export type from local"
   },
   "es:extract_local": {
@@ -52,8 +62,14 @@
   "es:function_arrow": {
     "prefix": "fna",
     "body": "const ${1:name} = (${2:arguments}) => {\n  $3\n}",
-    "description": "j: extract local"
+    "description": "j: function as arrow"
   },
+  "es:callback_arrow": {
+    "prefix": "cba",
+    "body": "() => {\n  $1\n}",
+    "description": "j: callback as arrow function"
+  },
+
   "node:import": {
     "prefix": "nim",
     "body": "const {$2} = require('$1')",
