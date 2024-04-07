@@ -41,8 +41,6 @@ alias cph="pwd | pbc" # copy current path to clipboard
 
 alias prev="cd -"
 alias npg="npm ls -g --depth=0"
-alias png="pnpm ls -g"
-alias pn="pnpm"
 alias hosts="cat /etc/hosts"
 alias findpid="sudo lsof -i -P | grep"
 alias e="exit"
@@ -110,6 +108,12 @@ alias gunmerged="/Users/$USER/.git_extras/git_unmerged"
 alias ghp="gh markdown-preview --light-mode"
 alias ghh="gh pr create --fill"
 alias ghhd="gh pr create --fill --draft"
+alias ghb="gh branch"
+alias ghw="gh repo view --web"
+
+## sqlite3
+alias sqlite="sqlite3"
+alias sqlt="sqlite3"
 
 ## nvm
 alias nvc="nvm current"
