@@ -113,7 +113,7 @@ nvim_tree.setup {
           arrow_open = "",
           default = "",
           open = "",
-          empty = "",
+          empty = "󱞞",
           empty_open = "",
           symlink = "",
           symlink_open = "",
@@ -148,10 +148,10 @@ nvim_tree.setup {
     enable = false,
     show_on_dirs = false,
     icons = {
-      hint = '',
-      info = '',
-      warning = '',
-      error = '',
+      hint = '󰤜',
+      info = '󰙎',
+      warning = '󰅽',
+      error = '󰀦',
     },
   },
   git = {
