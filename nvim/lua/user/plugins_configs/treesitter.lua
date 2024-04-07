@@ -15,7 +15,8 @@ configs.setup {
     'python',
     'go',
     'sql',
-    'markdown'
+    'markdown',
+    'vimdoc'
   },
   -- ensure_installed = 'all',
   sync_install = false,
