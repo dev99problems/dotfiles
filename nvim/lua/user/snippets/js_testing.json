@@ -19,16 +19,6 @@
     "body": "describe('$1', () => {\n  it('should', () => {\n    expect(true).toBe(true)\n  })\n})",
     "description": "j: jest describe->it->expect"
   },
-  "jest:expect_to_be": {
-    "prefix": "extb",
-    "body": "expect($1).toBe($2)",
-    "description": "j: jest expect().toBe()"
-  },
-  "jest:expect_to_equal": {
-    "prefix": "extq",
-    "body": "expect($1).toEqual($2)",
-    "description": "j: jest expect().toEqual()"
-  },
   "jest:before_each": {
     "prefix": "be",
     "body": "beforeEach(() => {\n\t$1\n})\n",
@@ -49,18 +39,28 @@
     "body": "afterAll(() => {\n\t$1\n})\n",
     "description": "j: jest afterAll"
   },
+  "jest:expect_to_be": {
+    "prefix": "expt_to_be",
+    "body": "expect($1).toBe($2)",
+    "description": "j: jest expect().toBe()"
+  },
+  "jest:expect_to_equal": {
+    "prefix": "expt_to_eq",
+    "body": "expect($1).toEqual($2)",
+    "description": "j: jest expect().toEqual()"
+  },
   "jest:expect_to_be_callled": {
-    "prefix": "extb",
+    "prefix": "expt_to_be_cal",
     "body": "expect($1).toHaveBeenCalled()",
     "description": "j: jest to be called"
   },
   "jest:expect_to_not_be_callled": {
-    "prefix": "exttnb",
+    "prefix": "expt_to_not_be_cal",
     "body": "expect($1).not.toHaveBeenCalled()",
     "description": "j: jest not to be called"
   },
   "jest:expect_to_be_callled_times": {
-    "prefix": "extb",
+    "prefix": "expt_to_be_cal_tm",
     "body": "expect($1).toHaveBeenCalledTimes($2)",
     "description": "j: jest to be called times"
   }
