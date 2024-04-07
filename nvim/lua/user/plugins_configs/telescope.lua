@@ -7,7 +7,7 @@ local fb_actions = telescope.extensions.file_browser.actions
 telescope.setup {
   defaults = {
     prompt_prefix = ' ',
-    selection_caret = ' ',
+    selection_caret = '>',
     -- path_display = { 'smart' },
     layout_config = {
       horizontal = {
