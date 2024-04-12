@@ -86,10 +86,28 @@ return packer.startup(function(use)
     run = ':GoUpdateBinaries'
   })
 
-  -- snippets
+
+  -- tests
+  -- MORE at https://github.com/nvim-neotest/neotest?tab=readme-ov-file
+  use 'marilari88/neotest-vitest'
+  use 'nvim-neotest/neotest-jest'
   use {
-    'L3MON4D3/LuaSnip',
-    tag = 'v2.0.0'
+    "nvim-neotest/neotest",
+    dependencies = {
+     "marilari88/neotest-vitest",
+    },
+    requires = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-treesitter/nvim-treesitter"
+    },
+  }
+
+-- snippets
+use {
+  'L3MON4D3/LuaSnip',
+  tag = 'v2.0.0'
   }
   use 'rafamadriz/friendly-snippets'
   -- use 'MarcWeber/vim-addon-mw-utils'
