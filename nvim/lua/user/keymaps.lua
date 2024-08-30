@@ -150,6 +150,7 @@ keymap("n", "<leader>rr", ":Telescope registers <CR>", opts)
 -- yank history
 keymap("n", "<leader>ne", ":Telescope neoclip <CR>", opts)
 -- bookmarks
+-- TODO: @gene: replace this with something more stable & persistent
 keymap("n", "gma", ":Telescope quickfix <CR>", opts)
 -- commands
 -- keymap("n", "<leader>fch", ":Telescope commands_history <CR>", opts)
@@ -201,7 +202,8 @@ keymap("n", "<C-n>", ":NvimTreeToggle <CR>", opts)
 -- NvimTreeCollapse
 
 -- ## gitui
-keymap("n", "gui", ":lua require('gitui').open()<CR>", opts)
+keymap("n", "gui", ":lua require('gitui').toggle()<CR>", opts)
+keymap("t", "gui", "<C-\\><C-n>:lua require('gitui').toggle()<CR>", opts)
 
 -- ## fzf
 -- history of commands
@@ -222,3 +224,10 @@ keymap('n', 'mmc', ':lua MiniMap.close()<CR>', opts)
 -- lsp
 keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true }) <CR>", opts)
 keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
+
+-- todo
+keymap("n", "<leader>tt", ":TodoTrouble<CR>", opts)
+keymap("n", "<leader>tto", ":TodoTelescope keywords=TODO<CR>", opts)
+keymap("n", "<leader>ttn", ":TodoTelescope=keywords=NOTE<CR>", opts)
+keymap("n", "]t", ":lua require('todo-comments').jump_next()<CR>", opts)
+keymap("n", "[t", ":lua require('todo-comments').jump_prev()<CR>", opts)
