@@ -9,6 +9,11 @@
     "body": "console.log($1)",
     "description": "j: console.log()"
   },
+  "general:console_log_smart": {
+    "prefix": "cls",
+    "body": "console.log('$1'); console.log($1)",
+    "description": "j: console.log()"
+  },
   "general:console_log_delimeter": {
     "prefix": "cld",
     "body": "console.log('--------------------------')",
@@ -26,8 +31,13 @@
   },
   "es:import_type": {
     "prefix": "imt",
-    "body": "import type {$2} from '$1'",
+    "body": "import type {$1} from './types'",
     "description": "j: import type"
+  },
+  "es:import_style": {
+    "prefix": "ims",
+    "body": "import s from './$1'",
+    "description": "j: import style"
   },
   "es:import_local_type": {
     "prefix": "imlt",
@@ -69,7 +79,11 @@
     "body": "() => {\n  $1\n}",
     "description": "j: callback as arrow function"
   },
-
+  "es:jsx_comment": {
+    "prefix": "jsxc",
+    "body": "{/* \n  $1  \n */}",
+    "description": "j: comment in jsx"
+  },
   "node:import": {
     "prefix": "nim",
     "body": "const {$2} = require('$1')",
