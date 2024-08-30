@@ -86,34 +86,34 @@ return packer.startup(function(use)
     run = ':GoUpdateBinaries'
   })
 
-
   -- tests
   -- MORE at https://github.com/nvim-neotest/neotest?tab=readme-ov-file
   use 'marilari88/neotest-vitest'
   use 'nvim-neotest/neotest-jest'
   use {
-    "nvim-neotest/neotest",
+    'nvim-neotest/neotest',
     dependencies = {
-     "marilari88/neotest-vitest",
+     'marilari88/neotest-vitest',
     },
     requires = {
-      "nvim-neotest/nvim-nio",
-      "nvim-lua/plenary.nvim",
-      "antoinemadec/FixCursorHold.nvim",
-      "nvim-treesitter/nvim-treesitter"
+      'nvim-neotest/nvim-nio',
+      'nvim-lua/plenary.nvim',
+      'antoinemadec/FixCursorHold.nvim',
+      'nvim-treesitter/nvim-treesitter'
     },
   }
 
--- snippets
-use {
-  'L3MON4D3/LuaSnip',
-  tag = 'v2.0.0'
+  -- snippets
+  use {
+    'L3MON4D3/LuaSnip',
+    tag = 'v2.0.0'
   }
   use 'rafamadriz/friendly-snippets'
   -- use 'MarcWeber/vim-addon-mw-utils'
   -- use 'tomtom/tlib_vim'
   -- use 'garbas/vim-snipmate'
 
+  -- auto-pairs
   use {
     'windwp/nvim-autopairs',
     config = function()
@@ -123,7 +123,7 @@ use {
   use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use {
-    'aspeddro/gitui.nvim',
+    'dev99problems/gitui.nvim',
     config = function()
       require('gitui').setup({
         window = {
@@ -132,10 +132,11 @@ use {
             height = 100,
             border = 'rounded'
           }
-        }
+        },
       })
     end
   }
+
   -- fzf
   use { 'junegunn/fzf', run = ':call fzf#install()' }
   use { 'junegunn/fzf.vim' }
@@ -183,7 +184,6 @@ use {
   use 'tpope/vim-repeat'
   use 'tpope/vim-unimpaired'
 
-
   -- scroll
   use 'karb94/neoscroll.nvim'
 
@@ -191,7 +191,7 @@ use {
   use { 'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async' }
 
   -- yank history
-  use { "kkharji/sqlite.lua" }
+  use { 'kkharji/sqlite.lua' }
   use {
     'AckslD/nvim-neoclip.lua',
     requires = {
@@ -204,11 +204,12 @@ use {
     'MattesGroeger/vim-bookmarks'
   }
 
-  -- trouble
+  -- trouble / todos
   use {
     'folke/trouble.nvim',
     requires = 'nvim-tree/nvim-web-devicons'
   }
+  use 'folke/todo-comments.nvim'
 
   -- themes
   use 'gruvbox-community/gruvbox'
