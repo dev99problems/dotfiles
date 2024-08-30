@@ -6,7 +6,7 @@
   },
   "test:it": {
     "prefix": "it_expt",
-    "body": "it('should $1', () => {\n  expect(${2:value}).toBe(${3:expected})\n})",
+    "body": "it('should $1', () => {\n  expect(true).toBe(true)\n})",
     "description": "j: testing it()"
   },
   "jest:expect": {
@@ -63,5 +63,10 @@
     "prefix": "expt_to_be_cal_tm",
     "body": "expect($1).toHaveBeenCalledTimes($2)",
     "description": "j: jest to be called times"
+  },
+  "vitest:mocks": {
+    "prefix": "tmock",
+    "body": "const mocks = vi.hoisted(() => ({\n  $1\n}))",
+    "description": "j: vitest mocks blueprint"
   }
 }

@@ -8,5 +8,10 @@
     "prefix": "cmp",
     "body": "const $1 = ({ $2 }) => {\n  return(\n    $3\n  )\n}",
     "description": "j: jsx component via arrow function"
+  },
+  "jsx:return_jsx": {
+    "prefix": "rex",
+    "body": "return (\n  $1\n)",
+    "description": "j: return jsx method"
   }
 }
