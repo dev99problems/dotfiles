@@ -340,8 +340,8 @@ preview_file() {
             ls -F --group-directories-first | head -n "$((lines - 3))" | "$(dirname "$0")"/.iconlookup -l "$cols" -B "$BSTR" -b " "
         elif exists tree; then
             fifo_pager tree --filelimit "$(find . -maxdepth 1 | wc -l)" -L 3 -C -F --dirsfirst --noreport
-        elif exists exa; then
-            exa -G --group-directories-first --colour=always
+        elif exists eza; then
+            eza -G --group-directories-first --colour=always
         else
             fifo_pager ls -F --group-directories-first --color=always
         fi

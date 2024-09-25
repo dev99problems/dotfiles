@@ -28,9 +28,9 @@ alias sz="du -hs" # stands for getting the folder size
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
-alias l="exa --long --git"
-alias ll="exa --long"
-alias lla="exa -a --long"
+alias l="eza --long --git"
+alias ll="eza --long"
+alias lla="eza -a --long"
 alias cat="bat"
 alias more="bat"
 alias dk="docker"
@@ -74,6 +74,7 @@ alias kgp="k get pods"
 ## git
 alias g="git"
 alias gs="git sign"
+alias gco="git checkout"
 alias gaa="git add ."
 alias gfix="git fix"
 alias gupd="git update"
@@ -153,6 +154,7 @@ alias png="pnpm ls -g"
 alias pn="pnpm"
 alias pout="pnpm outdated"
 alias pb="prun build"
+alias pi="pnpm install"
 alias pbs="prun build:with-source-maps"
 
 ## configs
@@ -253,6 +255,9 @@ alias liroo="ssh -i ~/.ssh/<ssh_key> <user>@<ip>"
 
 # PATH
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# nvim LSP
+export PATH="/Users/$USER/.local/share/nvim/lsp_servers/tsserver/node_modules/.bin:$PATH"
 
 # NOTE: to make this work, please refer to your custom tmux/README.md
 export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
