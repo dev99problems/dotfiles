@@ -68,5 +68,20 @@
     "prefix": "tmock",
     "body": "const mocks = vi.hoisted(() => ({\n  $1\n}))",
     "description": "j: vitest mocks blueprint"
+  },
+  "vitest:mock_impl_value": {
+    "prefix": "mockimponce",
+    "body": "vi.fn().mockImplementationOnce($1)",
+    "description": "j: vitest vi.fn().mockReturnValue"
+  },
+  "vitest:mock_ret_value": {
+    "prefix": "mockretuv",
+    "body": "vi.fn().mockReturnValue({\n  $1\n})",
+    "description": "j: vitest vi.fn().mockReturnValue"
+  },
+  "vitest:mock_ret_value_once": {
+    "prefix": "mockretuvonce",
+    "body": "vi.fn().mockReturnValueOnce({\n  $1\n})",
+    "description": "j: vitest vi.fn().mockReturnValueOnce"
   }
 }
