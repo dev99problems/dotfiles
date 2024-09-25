@@ -2,17 +2,17 @@ local utils = require('user.utils')
 
 utils.safe_require('gitsigns').setup {
   signs = {
-    add          = { text = '┃' },
+    add          = { text = '+' },
     change       = { text = '┃' },
-    delete       = { text = '_' },
+    delete       = { text = '-' },
     topdelete    = { text = '‾' },
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
   },
   signs_staged = {
-    add          = { text = '┃' },
+    add          = { text = '+' },
     change       = { text = '┃' },
-    delete       = { text = '_' },
+    delete       = { text = '-' },
     topdelete    = { text = '‾' },
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
