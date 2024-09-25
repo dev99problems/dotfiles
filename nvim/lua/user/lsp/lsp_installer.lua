@@ -63,7 +63,7 @@ lspconfig.marksman.setup {
   capabilities = opts.capabilities,
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
