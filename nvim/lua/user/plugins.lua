@@ -136,6 +136,7 @@ return packer.startup(function(use)
       })
     end
   }
+  use 'FabijanZulj/blame.nvim'
 
   -- fzf
   use { 'junegunn/fzf', run = ':call fzf#install()' }
@@ -209,7 +210,10 @@ return packer.startup(function(use)
     'folke/trouble.nvim',
     requires = 'nvim-tree/nvim-web-devicons'
   }
-  use 'folke/todo-comments.nvim'
+  use {
+    'folke/todo-comments.nvim',
+    dependencies = { "nvim-lua/plenary.nvim" },
+  }
 
   -- themes
   use 'gruvbox-community/gruvbox'
