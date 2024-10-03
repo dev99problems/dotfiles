@@ -225,9 +225,12 @@ keymap('n', 'mmc', ':lua MiniMap.close()<CR>', opts)
 keymap("n", "<leader>lf", ":lua vim.lsp.buf.format({ async = true }) <CR>", opts)
 keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
 
--- todo
+-- todo-comments
 keymap("n", "<leader>tt", ":TodoTrouble<CR>", opts)
 keymap("n", "<leader>tto", ":TodoTelescope keywords=TODO<CR>", opts)
 keymap("n", "<leader>ttn", ":TodoTelescope=keywords=NOTE<CR>", opts)
 keymap("n", "]t", ":lua require('todo-comments').jump_next()<CR>", opts)
 keymap("n", "[t", ":lua require('todo-comments').jump_prev()<CR>", opts)
+
+-- blame
+keymap("n", "<leader>gb", ":BlameToggle window<CR>", opts)
