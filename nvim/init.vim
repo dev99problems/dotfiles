@@ -3,9 +3,9 @@ lua require('user.options')
 
 lua require('user.theme')
 
-lua require('user.keymaps')
-
 lua require('user.plugins')
+
+lua require('user.keymaps')
 
 " Plugins custom configs
 lua require('user.plugins_configs')
