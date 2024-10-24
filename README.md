@@ -37,7 +37,7 @@ ln -s ~/reps/github/.dotfiles/nnn/plugins ~/.config/nnn/
 
 ```bash
 # alias
-ln -s ~/reps/github/.dotfiles/nvim/.config/nvim/ ~/.config/nvim
+ln -s ~/reps/github/.dotfiles/nvim/ ~/.config/nvim
 ```
 
 
@@ -46,7 +46,7 @@ ln -s ~/reps/github/.dotfiles/nvim/.config/nvim/ ~/.config/nvim
 ```bash
 # 1. Firstly you need to copy the config
 # alias
-ln -s ~/reps/github/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/reps/github/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 
 # 2. After that you need to install `tmp` - tmux plugin manager.
 # More details at https://github.com/tmux-plugins/tpm#installation
