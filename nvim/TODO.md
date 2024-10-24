@@ -1,6 +1,7 @@
 # Current plans
 
 ## TODO:
+`[ ]` migrate to `lazy.vim` from `packer` — it's unmaintained since 2023
 `[ ]` add some custom `Telescope` keymaps `https://www.youtube.com/watch?v=Ua8FkgTL-94`
 
 ## DONE:
