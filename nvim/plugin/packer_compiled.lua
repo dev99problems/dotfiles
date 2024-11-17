@@ -155,7 +155,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["gitui.nvim"] = {
-    config = { "\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vborder\frounded\vheight\3d\nwidth\3_\nsetup\ngitui\frequire\0" },
+    config = { "\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vheight\3d\nwidth\3_\vborder\frounded\nsetup\ngitui\frequire\0" },
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/gitui.nvim",
     url = "https://github.com/dev99problems/gitui.nvim"
@@ -408,7 +408,7 @@ vim.o.runtimepath = vim.o.runtimepath .. ",/Users/gene/.local/share/nvim/site/pa
 time([[Runtimepath customization]], false)
 -- Config for: gitui.nvim
 time([[Config for gitui.nvim]], true)
-try_loadstring("\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vborder\frounded\vheight\3d\nwidth\3_\nsetup\ngitui\frequire\0", "config", "gitui.nvim")
+try_loadstring("\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vheight\3d\nwidth\3_\vborder\frounded\nsetup\ngitui\frequire\0", "config", "gitui.nvim")
 time([[Config for gitui.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
