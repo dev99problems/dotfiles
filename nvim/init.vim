@@ -50,6 +50,11 @@ au FocusLost,WinLeave * :silent! w
 autocmd! BufWinLeave * let b:winview = winsaveview()
 autocmd! BufWinEnter * if exists('b:winview') | call winrestview(b:winview) | unlet b:winview
 
+" enables syntax highlighting for .asc files
+augroup asciidoc_syntax
+  autocmd!
+  autocmd BufNewFile,BufRead *.asc setfiletype asciidoc
+augroup END
 
 " Highlight all instances of word under cursor, when idle.
 " Useful when studying strange source code.
