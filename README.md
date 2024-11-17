@@ -65,7 +65,7 @@ tmux source ~/.tmux.conf
 
 ```bash
 # alias
-ln -s ~/reps/github/.dotfiles/git/.gitconfig ~/.gitconfig
+ln -s ~/reps/github/.dotfiles/git/gitconfig ~/.gitconfig
 ```
 
 
