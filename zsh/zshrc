@@ -119,6 +119,8 @@ alias sqlt="sqlite3"
 
 ## nvm
 alias nvc="nvm current"
+alias nv18="nvm use 18"
+alias nv20="nvm use 20"
 
 ## git peek by Jarred Sumner
 alias gp="git peek"
