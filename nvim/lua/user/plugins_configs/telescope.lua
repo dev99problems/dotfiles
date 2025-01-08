@@ -92,6 +92,9 @@ telescope.setup {
       layout_config = {
         preview_width = 0.4
       },
+    },
+    colorscheme = {
+      enable_preview = true
     }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/gene/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1725453128/share/lua/5.1/?/init.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1725453128/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/gene/.cache/nvim/packer_hererocks/2.1.1725453128/lib/lua/5.1/?.so"
+local package_path_str = "/Users/gene/.cache/nvim/packer_hererocks/2.1.1734355927/share/lua/5.1/?.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1734355927/share/lua/5.1/?/init.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1734355927/lib/luarocks/rocks-5.1/?.lua;/Users/gene/.cache/nvim/packer_hererocks/2.1.1734355927/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/gene/.cache/nvim/packer_hererocks/2.1.1734355927/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/Users/gene/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   dracula = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/dracula",
@@ -155,7 +160,7 @@ _G.packer_plugins = {
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["gitui.nvim"] = {
-    config = { "\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vheight\3d\nwidth\3_\vborder\frounded\nsetup\ngitui\frequire\0" },
+    config = { "\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vborder\frounded\vheight\3d\nwidth\3_\nsetup\ngitui\frequire\0" },
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/gitui.nvim",
     url = "https://github.com/dev99problems/gitui.nvim"
@@ -322,7 +327,7 @@ _G.packer_plugins = {
   ["solarized.nvim"] = {
     loaded = true,
     path = "/Users/gene/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/shaunsingh/solarized.nvim"
+    url = "https://github.com/maxmx03/solarized.nvim"
   },
   ["sqlite.lua"] = {
     loaded = true,
@@ -408,7 +413,7 @@ vim.o.runtimepath = vim.o.runtimepath .. ",/Users/gene/.local/share/nvim/site/pa
 time([[Runtimepath customization]], false)
 -- Config for: gitui.nvim
 time([[Config for gitui.nvim]], true)
-try_loadstring("\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vheight\3d\nwidth\3_\vborder\frounded\nsetup\ngitui\frequire\0", "config", "gitui.nvim")
+try_loadstring("\27LJ\2\n申1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\1\vwindow\0\foptions\1\0\1\foptions\0\1\0\3\vborder\frounded\vheight\3d\nwidth\3_\nsetup\ngitui\frequire\0", "config", "gitui.nvim")
 time([[Config for gitui.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
