@@ -136,6 +136,7 @@ return packer.startup(function(use)
       })
     end
   }
+  use 'sindrets/diffview.nvim'
   use 'FabijanZulj/blame.nvim'
 
   -- fzf
@@ -226,7 +227,7 @@ return packer.startup(function(use)
     'sonph/onehalf',
     rtp = 'vim'
   }
-  use 'shaunsingh/solarized.nvim'
+  use 'maxmx03/solarized.nvim'
   use 'marko-cerovac/material.nvim'
   use 'sainnhe/everforest'
 
