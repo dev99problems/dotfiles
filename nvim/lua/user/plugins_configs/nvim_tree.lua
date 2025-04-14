@@ -34,7 +34,7 @@ nvim_tree.setup {
   update_cwd = true,
   reload_on_bufenter = true,
   view = {
-    width = 45,
+    width = 40,
     side = "left",
     preserve_window_proportions = true,
     number = false,
