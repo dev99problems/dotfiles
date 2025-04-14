@@ -1,5 +1,5 @@
 [pager]
-    diff = diffnav
+    # diff = diffnav
     log = delta
     reflog = delta
     show = delta
