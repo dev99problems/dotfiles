@@ -16,6 +16,7 @@ configs.setup {
     'go',
     'sql',
     'markdown',
+    'astro',
     'vimdoc'
   },
   -- ensure_installed = 'all',
