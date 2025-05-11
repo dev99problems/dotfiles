@@ -18,6 +18,7 @@ keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
 
 -- Definition
 keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", opts)
+keymap("n", "gds", "<cmd>split | Lspsaga goto_definition<CR>", opts)
 
 -- Peek Definition
 -- you can edit the definition file in this flaotwindow
