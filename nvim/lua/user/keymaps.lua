@@ -229,7 +229,7 @@ keymap('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', opts)
 keymap("n", "<leader>tt", ":TodoTrouble<CR>", opts)
 keymap("n", "<leader>tc", ":TodoTrouble close<CR>", opts)
 keymap("n", "<leader>tto", ":TodoTelescope keywords=TODO<CR>", opts)
-keymap("n", "<leader>ttn", ":TodoTelescope=keywords=NOTE<CR>", opts)
+keymap("n", "<leader>ttn", ":TodoTelescope keywords=NOTE<CR>", opts)
 keymap("n", "]t", ":lua require('todo-comments').jump_next()<CR>", opts)
 keymap("n", "[t", ":lua require('todo-comments').jump_prev()<CR>", opts)
 
