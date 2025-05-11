@@ -69,10 +69,15 @@
     "body": "export type { $2 } from '$1'",
     "description": "j: export type from local"
   },
-  "es:extract_local": {
+  "es:extract_local_obj": {
     "prefix": "conex",
     "body": "const { $2 } = $1",
-    "description": "j: extract local"
+    "description": "j: extract local as object"
+  },
+  "es:extract_local_arr": {
+    "prefix": "conax",
+    "body": "const [ $2 ] = $1",
+    "description": "j: extract local as array"
   },
   "es:function_arrow": {
     "prefix": "fna",
