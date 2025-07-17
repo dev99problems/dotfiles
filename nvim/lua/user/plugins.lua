@@ -230,6 +230,7 @@ return packer.startup(function(use)
   use 'maxmx03/solarized.nvim'
   use 'marko-cerovac/material.nvim'
   use 'sainnhe/everforest'
+  use "rose-pine/neovim"
 
   -- misc
   use { 'lukas-reineke/indent-blankline.nvim' }
