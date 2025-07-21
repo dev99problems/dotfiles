@@ -29,6 +29,12 @@ keymap("n", "<S-Down>", ":resize -4<CR>", opts)
 keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
+-- QuickFix List
+keymap("n", "<leader>qo", ":copen<CR>", { desc = "Open Quickfix" })
+keymap("n", "<leader>qc", ":cclose<CR>", { desc = "Close Quickfix" })
+keymap("n", "<C-j>", ":cnext<CR>", { desc = "Next Quickfix item" })
+keymap("n", "<C-k>", ":cprev<CR>", { desc = "Prev Quickfix item" })
+
 
 -- NOTE: this should be a custom command!!!
 -- select block in js
