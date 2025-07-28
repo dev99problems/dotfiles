@@ -48,19 +48,42 @@ local live_multigrep = function(opts)
 end
 
 local function get_visual_selection()
-  local start_pos = vim.fn.getpos("'<")
-  local end_pos = vim.fn.getpos("'>")
-  local lines = vim.fn.getline(start_pos[2], end_pos[2])
+  -- Exit visual mode first to update the selection marks
+  vim.cmd('normal! gv')
 
-  if #lines == 0 then return "" end
+  -- Small delay to ensure marks are updated
+  vim.schedule(function()
+    -- Get the selected text properly
+    local start_pos = vim.fn.getpos("'<")
+    local end_pos = vim.fn.getpos("'>")
 
-  -- Handle single line selection
-  if #lines == 1 then
-    return string.sub(lines[1], start_pos[3], end_pos[3])
-  end
+    -- Only handle single line selections
+    if start_pos[2] ~= end_pos[2] then
+      print("Multi-line selection not supported")
+      return
+    end
 
-  -- Handle multi-line selection (take first line for search)
-  return string.sub(lines[1], start_pos[3])
+    -- Get the line
+    local line = vim.api.nvim_buf_get_lines(0, start_pos[2] - 1, start_pos[2], false)[1]
+
+    if not line then
+      print("No selection")
+      return
+    end
+
+    -- Get exactly what's selected
+    local selected_text = string.sub(line, start_pos[3], end_pos[3])
+
+    print("DEBUG: selected text = '" .. selected_text .. "'")
+
+    if selected_text and selected_text ~= "" then
+      live_multigrep({
+        default_text = selected_text
+      })
+    else
+      print("No text selected")
+    end
+  end)
 end
 
 local function grep_word_or_selection()
@@ -83,12 +106,7 @@ end
 M.setup = function()
   vim.keymap.set("n", "<leader>fw", grep_word_or_selection, { desc = "Multi Grep word under cursor" })
   vim.keymap.set("v", "<leader>fw", grep_word_or_selection, { desc = "Multi Grep selected text" })
-
-  -- Alternative: Modifying existing <leader>fg to use word under cursor when no prompt
-  vim.keymap.set("n", "<leader>fg", function()
-    local word = vim.fn.expand("<cword>")
-    live_multigrep({ default_text = word })
-  end, { desc = "Multi Grep with word under cursor" })
+  vim.keymap.set("n", "<leader>fg", live_multigrep, { desc = "Live multigrep" })
 end
 
 M.setup()
