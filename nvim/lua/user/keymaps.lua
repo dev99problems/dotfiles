@@ -1,8 +1,8 @@
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
+local keymap_for_fn = vim.keymap.set
 local keymap = vim.api.nvim_set_keymap
-
 
 -- Global --
 -- add empty line in normal mode
@@ -30,10 +30,33 @@ keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 
 -- QuickFix List
+local function qf_nav(direction)
+  local qf = vim.fn.getqflist({ idx = 0, size = 0 })
+  if qf.size == 0 then
+    vim.notify("Quickfix list is empty", vim.log.levels.WARN)
+    return
+  end
+
+  if direction == "next" then
+    if qf.idx == qf.size then
+      vim.cmd("cfirst") -- wrap to first
+    else
+      vim.cmd("cnext")
+    end
+  elseif direction == "prev" then
+    if qf.idx == 1 then
+      vim.cmd("clast") -- wrap to last
+    else
+      vim.cmd("cprev")
+    end
+  end
+end
+
+-- vim.keymap.set("n", "<C-k>", , { desc = "Prev Quickfix item (cycled)" })
 keymap("n", "<leader>qo", ":copen<CR>", { desc = "Open Quickfix" })
 keymap("n", "<leader>qc", ":cclose<CR>", { desc = "Close Quickfix" })
-keymap("n", "<C-j>", ":cnext<CR>", { desc = "Next Quickfix item" })
-keymap("n", "<C-k>", ":cprev<CR>", { desc = "Prev Quickfix item" })
+keymap_for_fn("n", "<C-j>", function() qf_nav("next") end, { desc = "Next Quickfix item (cycled)" })
+keymap_for_fn("n", "<C-k>", function() qf_nav("prev") end, { desc = "Prev Quickfix item (cycled)" })
 
 
 -- NOTE: this should be a custom command!!!
