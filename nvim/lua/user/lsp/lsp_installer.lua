@@ -46,6 +46,14 @@ lspconfig.pyright.setup {
   settings = pyright_settings
 }
 
+local pylsp_settings = require('user.lsp.settings.pylsp').settings
+lspconfig.pylsp.setup {
+  attach = opts.on_attach,
+  capabilities = opts.capabilities,
+  settings = pylsp_settings
+}
+
+-- json
 local jsonls_settings = require('user.lsp.settings.jsonls').settings
 lspconfig.jsonls.setup {
   attach = opts.on_attach,
@@ -53,33 +61,45 @@ lspconfig.jsonls.setup {
   settings = jsonls_settings
 }
 
+-- ruby
 lspconfig.solargraph.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
+-- md
 lspconfig.marksman.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
+-- ts
 lspconfig.ts_ls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
+-- eslint
 lspconfig.eslint.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
-lspconfig.gopls.setup {}
+-- go
+local gopls_settings = require('user.lsp.settings.gopls').settings
+lspconfig.gopls.setup {
+  on_attach = opts.on_attach,
+  capabilities = opts.capabilities,
+  settings = gopls_settings
+}
 
+-- css
 lspconfig.cssls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
+-- bash
 lspconfig.bashls.setup {
   attach = opts.on_attach,
   capabilities = opts.capabilities,

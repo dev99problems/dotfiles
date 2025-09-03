@@ -44,6 +44,14 @@ M.setup = function()
   })
 end
 
+-- NOTE: this adds auto-formatting for *.py and *.go
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.py", "*.go" },
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+})
+
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.documentHighlightProvider then
