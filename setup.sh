@@ -51,7 +51,7 @@ create_link() {
     if [[ ! -e "$src" ]]; then
         echo "Error: Source file $src does not exist"
         return 1
-    }
+    fi
 
     # Create destination directory if it doesn't exist
     mkdir -p "$destdir"
