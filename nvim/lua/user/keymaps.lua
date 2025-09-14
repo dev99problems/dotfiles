@@ -187,8 +187,9 @@ keymap("n", "gma", ":Telescope quickfix <CR>", opts)
 -- ## floaterm
 keymap("n", "<M-y>", ":FloatermToggle <CR>", opts)
 keymap("t", "<M-y>", "<C-\\><C-n>:FloatermToggle <CR>", opts)
--- keymap("n", "<M-t>", ":FloatermToggle <CR>", opts)
--- keymap("t", "<M-t>", "<C-\\><C-n>:FloatermToggle <CR>", opts)
+-- NOTE: In case of Cmd-y won't work in neovim
+-- keymap_for_fn("n", "<F13>", ":FloatermToggle <CR>", opts)
+-- keymap_for_fn("t", "<F13>", "<C-\\><C-n>:FloatermToggle <CR>", opts)
 
 -- ## Bufferline
 -- switching between buffers
