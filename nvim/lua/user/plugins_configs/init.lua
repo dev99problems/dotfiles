@@ -20,6 +20,7 @@ require('user.plugins_configs.telescope_grep')
 require('user.plugins_configs.todo')
 require('user.plugins_configs.treesitter')
 require('user.plugins_configs.trouble')
+require('user.plugins_configs.ts_autotag')
 -- require('user.plugins_configs.solar_client')
 -- winbar requires NeoVim nightly, aka 0.9.x
 -- require('user.plugins.winbar')
