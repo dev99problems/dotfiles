@@ -4,6 +4,26 @@
     "body": "function $1($2) {\n\treturn (\n\t\t$3\n\t)\n}",
     "description": "j: jsx component via function"
   },
+  "jsx:cmp_func_plus_exp": {
+    "prefix": "cmpfex",
+    "body": "function $1($2) {\n\treturn (\n\t\t$3\n\t)\n}\n\n export { $1 }",
+    "description": "j: jsx function component + export"
+  },
+  "jsx:cmp_func_simple": {
+    "prefix": "cmpfsim",
+    "body": "import { styles } from './styles'\nimport type {} from './types'\n\nfunction $1($2) {\n\treturn (\n\t\t<div>$3</div>\n\t)\n}\n\n export { $1 }",
+    "description": "j: jsx function component + export"
+  },
+  "jsx:imp_styles_simple": {
+    "prefix": "imstsim",
+    "body": "import { css $1} from '@/styled-system/css'",
+    "description": "j: jsx import styles in simplescore style"
+  },
+  "jsx:create_styles_simple": {
+    "prefix": "crtstsim",
+    "body": "import { css } from '@/styled-system/css'\n\nconst styles = {\n\troot: css({\n\t\t$1\n\t})\n}\n\nexport { styles } ",
+    "description": "j: jsx import styles in simplescore style"
+  },
   "jsx:cmp_arr": {
     "prefix": "cmp",
     "body": "const $1 = ({ $2 }) => {\n  return(\n    $3\n  )\n}",

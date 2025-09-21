@@ -176,6 +176,9 @@ alias gcon="nvim ~/.gitconfig"
 alias tcon="nvim ~/.tmux.conf"
 alias tupd="tmux source ~/.tmux.conf"
 
+## cursor
+alias ca="cursor-agent"
+
 # binds
 bindkey "^f" forward-word 
 bindkey "^i" end-of-line

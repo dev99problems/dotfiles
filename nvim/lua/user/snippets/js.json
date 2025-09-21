@@ -65,7 +65,7 @@
     "description": "j: export from local"
   },
   "es:export_local_type": {
-    "prefix": "eexpl",
+    "prefix": "eexptl",
     "body": "export type { $2 } from '$1'",
     "description": "j: export type from local"
   },
