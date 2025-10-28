@@ -49,6 +49,9 @@ alias hosts="cat /etc/hosts"
 alias findpid="sudo lsof -i -P | grep"
 alias e="exit"
 
+## docker
+alias dkp="docker ps"
+
 ## deno
 alias dr="deno run"
 
