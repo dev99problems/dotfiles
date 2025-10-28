@@ -13,6 +13,9 @@ keymap("n", "sf", "<cmd>Lspsaga finder<CR>", opts)
 -- Code action
 keymap({"n","v"}, "sca", "<cmd>Lspsaga code_action<CR>", opts)
 
+-- Outline
+keymap({"n"}, "sou", "<cmd>Lspsaga outline<CR>", opts)
+
 -- Rename
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>", opts)
 

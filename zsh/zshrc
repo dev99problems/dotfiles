@@ -49,6 +49,9 @@ alias hosts="cat /etc/hosts"
 alias findpid="sudo lsof -i -P | grep"
 alias e="exit"
 
+## docker
+alias dkp="docker ps"
+
 ## deno
 alias dr="deno run"
 
@@ -175,6 +178,9 @@ alias gcon="nvim ~/.gitconfig"
 
 alias tcon="nvim ~/.tmux.conf"
 alias tupd="tmux source ~/.tmux.conf"
+
+## cursor
+alias ca="cursor-agent"
 
 # binds
 bindkey "^f" forward-word 

@@ -1,6 +1,21 @@
 # TMUX 3.0 installation
 
-## Preface
+## Installation and setup
+
+You can easily install `tmux` via `brew`, then properly link `~/.tmux.conf` to the one from `dotfiles`.
+
+After that don't forget to update `tmux` config with `tupdm` alias.
+
+Then install `TPM` aka Tmux Plugin manager by cloning repo:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+After that install plugins by hitting `<Prefix>I`.
+
+
+## In case of troubles
 
 `ncurses` framework - [context](https://tldp.org/HOWTO/NCURSES-Programming-HOWTO/intro.html)
 
