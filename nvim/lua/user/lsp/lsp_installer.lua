@@ -73,6 +73,12 @@ lspconfig.marksman.setup {
   capabilities = opts.capabilities,
 }
 
+-- astro
+lspconfig.astro.setup({
+  capabilities = require("cmp_nvim_lsp").default_capabilities(),
+  filetypes = { "astro" },
+})
+
 -- ts
 lspconfig.ts_ls.setup {
   attach = opts.on_attach,
