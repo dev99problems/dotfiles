@@ -122,6 +122,7 @@ return packer.startup(function(use)
   }
   use 'lewis6991/gitsigns.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use 'brenoprata10/nvim-highlight-colors'
   use {
     'dev99problems/gitui.nvim',
     config = function()

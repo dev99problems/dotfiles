@@ -22,8 +22,57 @@ lua require('user.lsp')
 autocmd TermOpen * startinsert
 
 " Neoformat config
-let g:neoformat_try_node_exe = 1
-autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.ts,*.tsx Neoformat
+" --- Biome formatter ---
+let g:neoformat_javascript_biome = {
+      \ 'exe': 'biome',
+      \ 'args': ['format', '--stdin-file-path', '%:p'],
+      \ 'stdin': 1,
+      \ 'valid_exit_codes': [0],
+      \ }
+
+let g:neoformat_typescript_biome = g:neoformat_javascript_biome
+let g:neoformat_javascriptreact_biome = g:neoformat_javascript_biome
+let g:neoformat_typescriptreact_biome = g:neoformat_javascript_biome
+let g:neoformat_json_biome = g:neoformat_javascript_biome
+
+function! s:project_has_biome() abort
+  return findfile('biome.json', '.;') !=# ''
+endfunction
+
+function! s:project_has_prettier() abort
+  return findfile('.prettierrc', '.;') !=# ''
+        \ || findfile('.prettierrc.json', '.;') !=# ''
+        \ || findfile('.prettierrc.js', '.;') !=# ''
+        \ || findfile('.prettierrc.cjs', '.;') !=# ''
+        \ || findfile('.prettierrc.yaml', '.;') !=# ''
+        \ || findfile('.prettierrc.yml', '.;') !=# ''
+        \ || findfile('prettier.config.js', '.;') !=# ''
+        \ || findfile('prettier.config.cjs', '.;') !=# ''
+endfunction
+
+function! s:neoformat_select_formatter() abort
+  let l:ft = &filetype
+
+  if s:project_has_biome()
+    execute 'let g:neoformat_enabled_' . l:ft . " = ['biome']"
+    return
+  endif
+
+  if s:project_has_prettier()
+    execute 'let g:neoformat_enabled_' . l:ft . " = ['prettier']"
+    return
+  endif
+
+  " No config → disable formatting
+  execute 'let g:neoformat_enabled_' . l:ft . ' = []'
+endfunction
+
+" let g:neoformat_try_node_exe = 1
+augroup NeoformatProjectAware
+  autocmd!
+  autocmd BufEnter,BufReadPost *.js,*.ts,*.jsx,*.tsx,*.json call s:neoformat_select_formatter()
+  autocmd BufWritePre *.js,*.ts,*.jsx,*.tsx,*.json Neoformat
+augroup END
 
 " Adds synchronisation between NvimTree and opened file,
 " basically, openes the current file's folder
