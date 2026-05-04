@@ -43,6 +43,10 @@ alias finder="ofd"
 alias here="ofd"
 alias cph="pwd | pbc" # copy current path to clipboard
 
+# docker compose
+alias dclog="docker compose logs --tail=100"
+alias dcp="docker compose ps"
+
 alias prev="cd -"
 alias npg="npm ls -g --depth=0"
 alias hosts="cat /etc/hosts"
@@ -101,6 +105,7 @@ alias gl="git last"
 alias gn="git new"
 alias gr="git rename"
 alias grel="git reset ."
+alias gccb="git branch --show-current | pbc"
 alias gb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
 alias gch='git recent | fzf --height=20% --info=inline | xargs git checkout'
 # attempt-to-add: let to see git diff for untracked files
