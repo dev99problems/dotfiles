@@ -36,18 +36,20 @@ let g:neoformat_typescriptreact_biome = g:neoformat_javascript_biome
 let g:neoformat_json_biome = g:neoformat_javascript_biome
 
 function! s:project_has_biome() abort
-  return findfile('biome.json', '.;') !=# ''
+  let l:dir = expand('%:p:h') . ';'
+  return findfile('biome.json', l:dir) !=# ''
 endfunction
 
 function! s:project_has_prettier() abort
-  return findfile('.prettierrc', '.;') !=# ''
-        \ || findfile('.prettierrc.json', '.;') !=# ''
-        \ || findfile('.prettierrc.js', '.;') !=# ''
-        \ || findfile('.prettierrc.cjs', '.;') !=# ''
-        \ || findfile('.prettierrc.yaml', '.;') !=# ''
-        \ || findfile('.prettierrc.yml', '.;') !=# ''
-        \ || findfile('prettier.config.js', '.;') !=# ''
-        \ || findfile('prettier.config.cjs', '.;') !=# ''
+  let l:dir = expand('%:p:h') . ';'
+  return findfile('.prettierrc', l:dir) !=# ''
+        \ || findfile('.prettierrc.json', l:dir) !=# ''
+        \ || findfile('.prettierrc.js', l:dir) !=# ''
+        \ || findfile('.prettierrc.cjs', l:dir) !=# ''
+        \ || findfile('.prettierrc.yaml', l:dir) !=# ''
+        \ || findfile('.prettierrc.yml', l:dir) !=# ''
+        \ || findfile('prettier.config.js', l:dir) !=# ''
+        \ || findfile('prettier.config.cjs', l:dir) !=# ''
 endfunction
 
 function! s:neoformat_select_formatter() abort
@@ -67,7 +69,7 @@ function! s:neoformat_select_formatter() abort
   execute 'let g:neoformat_enabled_' . l:ft . ' = []'
 endfunction
 
-" let g:neoformat_try_node_exe = 1
+let g:neoformat_try_node_exe = 1
 augroup NeoformatProjectAware
   autocmd!
   autocmd BufEnter,BufReadPost *.js,*.ts,*.jsx,*.tsx,*.json call s:neoformat_select_formatter()

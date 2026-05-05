@@ -125,6 +125,9 @@ alias ghhd="gh pr create --fill --draft"
 alias ghb="gh branch"
 alias ghw="gh repo view --web"
 
+## copilot
+alias cpl="copilot --yolo"
+
 ## sqlite3
 alias sqlite="sqlite3"
 alias sqlt="sqlite3"
