@@ -1,4 +1,5 @@
 require('user.plugins_configs.bufferline')
+require('user.plugins_configs.conform')
 require('user.plugins_configs.floaterm')
 require('user.plugins_configs.gitsigns')
 require('user.plugins_configs.blame')
@@ -24,4 +25,3 @@ require('user.plugins_configs.ts_autotag')
 -- require('user.plugins_configs.solar_client')
 -- winbar requires NeoVim nightly, aka 0.9.x
 -- require('user.plugins.winbar')
-

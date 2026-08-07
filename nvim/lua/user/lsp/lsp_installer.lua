@@ -20,6 +20,8 @@ local opts = {
 
 -- lua_ls config
 lspconfig.lua_ls.setup {
+  on_attach = opts.on_attach,
+  capabilities = opts.capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -41,14 +43,14 @@ lspconfig.lua_ls.setup {
 -- python
 local pyright_settings = require('user.lsp.settings.pyright').settings
 lspconfig.pyright.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
   settings = pyright_settings
 }
 
 local pylsp_settings = require('user.lsp.settings.pylsp').settings
 lspconfig.pylsp.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
   settings = pylsp_settings
 }
@@ -56,38 +58,39 @@ lspconfig.pylsp.setup {
 -- json
 local jsonls_settings = require('user.lsp.settings.jsonls').settings
 lspconfig.jsonls.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
   settings = jsonls_settings
 }
 
 -- ruby
 lspconfig.solargraph.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
 -- md
 lspconfig.marksman.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
 -- astro
 lspconfig.astro.setup({
+  on_attach = opts.on_attach,
   capabilities = require("cmp_nvim_lsp").default_capabilities(),
   filetypes = { "astro" },
 })
 
 -- ts
 lspconfig.ts_ls.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
 -- eslint
 lspconfig.eslint.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
@@ -101,13 +104,13 @@ lspconfig.gopls.setup {
 
 -- css
 lspconfig.cssls.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
 -- bash
 lspconfig.bashls.setup {
-  attach = opts.on_attach,
+  on_attach = opts.on_attach,
   capabilities = opts.capabilities,
 }
 
