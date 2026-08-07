@@ -66,13 +66,19 @@ cmp.setup {
     end,
   },
   window = {
-    documentation = cmp.config.window.bordered()
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered({
+      max_height = 10,
+      max_width = 80,
+    }),
   },
   mapping = {
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-1), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(1), { 'i', 'c' }),
+    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ['<C-e>'] = cmp.mapping {

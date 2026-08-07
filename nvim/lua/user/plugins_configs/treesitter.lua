@@ -14,6 +14,7 @@ configs.setup {
     'ruby',
     'python',
     'go',
+    'java',
     'sql',
     'markdown',
     'astro',

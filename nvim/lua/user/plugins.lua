@@ -69,6 +69,7 @@ return packer.startup(function(use)
   -- lsp
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use 'mfussenegger/nvim-jdtls'
   use ({
     'nvimdev/lspsaga.nvim',
     after = 'nvim-lspconfig',
@@ -240,6 +241,7 @@ return packer.startup(function(use)
   use 'ThePrimeagen/vim-be-good'
   use { 'echasnovski/mini.map', branch = 'stable' }
   use "sbdchd/neoformat"
+  use 'stevearc/conform.nvim'
 
   if PACKER_BOOTSTRAP then
     require('packer').sync()
